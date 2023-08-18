@@ -1,0 +1,3090 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`codegen > should return code 1`] = `
+"
+/**
+ * 修改系统用户
+ * @param {UserParam} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseSysUser>}
+ */
+export const sysUserUpdate = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/sysUser/update.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 新增系统用户账号
+ * @param {UserParam} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseSysUser>}
+ */
+export const sysUserSave = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/sysUser/save.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 修改角色
+ * @param {RoleParam} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseSysRole>}
+ */
+export const sysRoleUpdate = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/sysRole/update.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 新增角色
+ * @param {RoleParam} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseSysRole>}
+ */
+export const sysRoleSave = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/sysRole/save.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 修改部门
+ * @param {DeptParam} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseSysDept>}
+ */
+export const sysDeptUpdate = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/sysDept/update.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 新增部门
+ * @param {DeptParam} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseSysDept>}
+ */
+export const sysDeptSave = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/sysDept/save.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 修改权限模块
+ * @param {AclModuleParam} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseSysAclModule>}
+ */
+export const sysAclModuleUpdate = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/sysAclModule/update.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 新增权限模块
+ * @param {AclModuleParam} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseSysAclModule>}
+ */
+export const sysAclModuleSave = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/sysAclModule/save.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 修改权限点
+ * @param {AclParam} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseSysAcl>}
+ */
+export const sysAclUpdate = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/sysAcl/update.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 新增权限点
+ * @param {AclParam} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseSysAcl>}
+ */
+export const sysAclSave = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/sysAcl/save.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 新增、修改及删除的操作（逻辑删除）
+ * @param {Ota} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseOta>}
+ */
+export const otaSave = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/ota/save.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 新增、修改及删除的操作（逻辑删除）
+ * @param {LaunchPageFile} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseLaunchPageFile>}
+ */
+export const launchPageFileSave = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/launchPageFile/save.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 新增、修改及删除的操作（逻辑删除）
+ * @param {LaunchPage} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseLaunchPage>}
+ */
+export const launchPageSave = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/launchPage/save.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 修改
+ * @param {DeviceTypeParam} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseDeviceType>}
+ */
+export const deviceTypeUpdateDeviceType = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/deviceType/updateDeviceType.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 新增
+ * @param {DeviceTypeParam} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseDeviceType>}
+ */
+export const deviceTypeSaveDeviceType = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/deviceType/saveDeviceType.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 修改
+ * @param {DeviceParam} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseDevice>}
+ */
+export const deviceUpdateDevice = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/device/updateDevice.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 新增
+ * @param {DeviceParam} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseDevice>}
+ */
+export const deviceSaveDevice = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/device/saveDevice.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 修改
+ * @param {AppUserDeviceParam} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseAppUserDevice>}
+ */
+export const appUserDeviceUpdateAppUserDevice = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/appUserDevice/updateAppUserDevice.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 新增设备和关系
+ * @param {{ param: AppUserDeviceAndDeviceParam }} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<object>}
+ */
+export const appUserDeviceSaveAppUserDeviceAndDevice = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/appUserDevice/saveAppUserDeviceAndDevice.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 新增
+ * @param {AppUserDeviceParam} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseAppUserDevice>}
+ */
+export const appUserDeviceSaveAppUserDevice = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/appUserDevice/saveAppUserDevice.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 修改
+ * @param {AppUserParam} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseAppUser>}
+ */
+export const appUserUpdateAppUser = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/appUser/updateAppUser.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 新增
+ * @param {AppUserParam} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseAppUser>}
+ */
+export const appUserSaveAppUser = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/appUser/saveAppUser.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 新增
+ * @param {{ file: string }} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseString>}
+ */
+export const anonUploadUploadFile = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/anon/upload/uploadFile.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 修改
+ * @param {TranslationParam} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseTranslation>}
+ */
+export const anonTranslationUpdate = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/anon/translation/update.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 新增
+ * @param {TranslationParam} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseTranslation>}
+ */
+export const anonTranslationSaveTranslation = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/anon/translation/saveTranslation.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 修改
+ * @param {SuggestionParam} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseSuggestion>}
+ */
+export const anonSuggestionUpdateSuggestion = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/anon/suggestion/updateSuggestion.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 新增
+ * @param {SuggestionParam} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseSuggestion>}
+ */
+export const anonSuggestionSaveSuggestion = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/anon/suggestion/saveSuggestion.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 新增、修改及删除的操作（逻辑删除）
+ * @param {PushStringFullVO} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponsePushString>}
+ */
+export const anonPushstringSave = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/anon/pushstring/save.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 新增、修改及删除的操作（逻辑删除）
+ * @param {Ota} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseOta>}
+ */
+export const anonOtaSave = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/anon/ota/save.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 修改
+ * @param {EqTestParam} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseEqTest>}
+ */
+export const anonEqTestUpdateEqTest = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/anon/eqTest/updateEqTest.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 新增
+ * @param {EqTestParam} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseEqTest>}
+ */
+export const anonEqTestSaveEqTest = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/anon/eqTest/saveEqTest.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 修改
+ * @param {DiscoverParam} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseDiscover>}
+ */
+export const anonDiscoverUpdateDiscover = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/anon/discover/updateDiscover.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 新增
+ * @param {DiscoverParam} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseDiscover>}
+ */
+export const anonDiscoverSaveDiscover = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/anon/discover/saveDiscover.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 修改
+ * @param {DeviceTypeParam} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseDeviceType>}
+ */
+export const anonDeviceTypeUpdateDeviceType = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/anon/deviceType/updateDeviceType.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 新增
+ * @param {DeviceTypeParam} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseDeviceType>}
+ */
+export const anonDeviceTypeSaveDeviceType = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/anon/deviceType/saveDeviceType.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 新增
+ * @param {DeviceMessageParam} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseDeviceMessage>}
+ */
+export const anonDeviceMessageSaveDeviceMessage = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/anon/deviceMessage/saveDeviceMessage.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 修改
+ * @param {DeviceParam} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseDevice>}
+ */
+export const anonDeviceUpdateDevice = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/anon/device/updateDevice.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 新增
+ * @param {DeviceParam} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseDevice>}
+ */
+export const anonDeviceSaveDevice = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/anon/device/saveDevice.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 修改
+ * @param {AppUserDeviceParam} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseAppUserDevice>}
+ */
+export const anonAppUserDeviceUpdateAppUserDevice = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/anon/appUserDevice/updateAppUserDevice.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 新增设备和关系
+ * @param {AppUserDeviceAndDeviceParam} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<object>}
+ */
+export const anonAppUserDeviceSaveAppUserDeviceAndDevice = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/anon/appUserDevice/saveAppUserDeviceAndDevice.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 新增
+ * @param {AppUserDeviceParam} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseAppUserDevice>}
+ */
+export const anonAppUserDeviceSaveAppUserDevice = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/anon/appUserDevice/saveAppUserDevice.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 修改
+ * @param {AppUserParam} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseAppUser>}
+ */
+export const anonAppUserUpdateAppUser = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/anon/appUser/updateAppUser.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 新增
+ * @param {AppUserParam} data
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseAppUser>}
+ */
+export const anonAppUserSaveAppUser = (data, config = {}) => {
+  return request.request({
+    method: 'post',
+    url: '/anon/appUser/saveAppUser.json',
+    data,
+    ...config
+  })
+}       
+          
+
+/**
+ * 系统用户登出
+ * @param {{  }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseString>}
+ */
+export const userLogout = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/user/logout.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 系统用户登录
+ * @param {{ username: string, password: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseObject>}
+ */
+export const userLogin = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/user/login.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 获取用户的权限树
+ * @param {{ userId: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseListAclModuleLevelDto>}
+ */
+export const sysUserUser_acltree = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/sysUser/user_acltree.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 重置用户密码
+ * @param {{ id: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseString>}
+ */
+export const sysUserResetPassword = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/sysUser/resetPassword.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 获取当前登录用户信息
+ * @param {{  }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseMapStringObject>}
+ */
+export const sysUserNotneedloginGet_userinfo = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/sysUser/notneedlogin/get_userinfo.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 修改用户密码(不需要旧密码)
+ * @param {{ id: string, password: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseString>}
+ */
+export const sysUserModifyPassword = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/sysUser/modifyPassword.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 按部门分页获取列表
+ * @param {{ pageNo?: number, pageSize?: number, deptKeyid: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponsePageResultSysUser>}
+ */
+export const sysUserGet_page_by_deptkeyid = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/sysUser/get_page_by_deptkeyid.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 获取角色的用户列表
+ * @param {{ roleId: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseMapStringListSysUser>}
+ */
+export const sysRoleUsers = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/sysRole/users.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 获取角色的权限树
+ * @param {{ roleId: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseListAclModuleLevelDto>}
+ */
+export const sysRoleTree = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/sysRole/tree.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 获取角色列表
+ * @param {{  }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseListSysRole>}
+ */
+export const sysRoleList = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/sysRole/list.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 获取用户的角色列表
+ * @param {{ userId: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseListSysRole>}
+ */
+export const sysRoleGetRoleListByUserId = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/sysRole/getRoleListByUserId.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 保存角色的用户关系
+ * @param {{ roleId: string, userIds?: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseString>}
+ */
+export const sysRoleChangeUsers = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/sysRole/changeUsers.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 保存角色的权限树
+ * @param {{ roleId: string, aclIds?: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseString>}
+ */
+export const sysRoleChangeAcls = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/sysRole/changeAcls.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 回滚接口
+ * @param {{ id: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseString>}
+ */
+export const sysLogRecover = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/sysLog/recover.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 分页获取列表
+ * @param {{ pageNo?: number, pageSize?: number, type: number }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponsePageResultSysLogWithBLOBs>}
+ */
+export const sysLogGet_page_by_Logmodulekeyid = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/sysLog/get_page_by_Logmodulekeyid.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 获取部门树
+ * @param {{  }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseListDeptLevelDto>}
+ */
+export const sysDeptTree = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/sysDept/tree.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 删除部门
+ * @param {{ deptId: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseString>}
+ */
+export const sysDeptDelete = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/sysDept/delete.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 获取权限模块树
+ * @param {{  }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseListAclModuleLevelDto>}
+ */
+export const sysAclModuleTree = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/sysAclModule/tree.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 删除权限模块
+ * @param {{ aclModuleKeyid: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseString>}
+ */
+export const sysAclModuleDelete = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/sysAclModule/delete.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 按权限模块分页获取列表
+ * @param {{ pageNo?: number, pageSize?: number, aclModuleKeyid: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponsePageResultSysAcl>}
+ */
+export const sysAclGet_page_by_aclmodulekeyid = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/sysAcl/get_page_by_aclmodulekeyid.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 删除权限点
+ * @param {{ aclId: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseString>}
+ */
+export const sysAclDelete = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/sysAcl/delete.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 获取权限点分配的用户和角色数据
+ * @param {{ aclId: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseMapStringObject>}
+ */
+export const sysAclAcls = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/sysAcl/acls.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 根据主键查询详情
+ * @param {{ id: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseOta>}
+ */
+export const otaSelect_detail = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/ota/select_detail.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 根据硬件版本号查询详情
+ * @param {{ hardwareVersion: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseOta>}
+ */
+export const otaSelect_by_hv = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/ota/select_by_hv.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 按分页获取列表
+ * @param {{ pageNo?: number, pageSize?: number, deviceName?: string, isDeleted?: string, productKeyid: string, softwareVersion: string, hardwareVersion: string, chipNo: string, orderWhat: string, orderHow: string, pageValue: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponsePageResultOtaVO>}
+ */
+export const otaGet_page_list = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/ota/get_page_list.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 根据主键查询详情
+ * @param {{ id: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseLaunchPageFile>}
+ */
+export const launchPageFileSelect_detail = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/launchPageFile/select_detail.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 查询LaunchPageFile列表
+ * @param {{ limit: number, offset: number, isDeleted: string, launchPageKeyid: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponsePageResultLaunchPageFile>}
+ */
+export const launchPageFileGet_LaunchPageFile_list = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/launchPageFile/get_LaunchPageFile_list.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 根据主键查询详情
+ * @param {{ id: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseLaunchPage>}
+ */
+export const launchPageSelect_detail = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/launchPage/select_detail.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 查询LaunchPage列表
+ * @param {{ limit: number, offset: number, isDeleted: string, oemKeyid: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponsePageResultLaunchPage>}
+ */
+export const launchPageGet_LaunchPage_list = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/launchPage/get_LaunchPage_list.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 根据主键查询详情
+ * @param {{ id: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseDeviceType>}
+ */
+export const deviceTypeSelect_by_id = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/deviceType/select_by_id.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 按分页获取列表
+ * @param {{ pageNo?: number, pageSize?: number, deviceName: string, isDeleted?: string, earphoneName: string, orderWhat: string, orderHow: string, pageValue: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponsePageResultDeviceType>}
+ */
+export const deviceTypeGet_page_list = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/deviceType/get_page_list.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 根据主键查询详情
+ * @param {{ id: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseDeviceVO>}
+ */
+export const deviceSelect_by_id = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/device/select_by_id.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 按分页获取列表
+ * @param {{ pageNo?: number, pageSize?: number, isDeleted?: string, devicetypeKeyid: string, orderWhat: string, orderHow: string, pageValue: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponsePageResultDeviceVO>}
+ */
+export const deviceGet_page_list = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/device/get_page_list.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 按分页获取列表
+ * @param {{ appUserKeyid: string, deviceKeyid: string, isDeleted?: string, pageNo?: number, pageSize?: number, orderWhat: string, orderHow: string, pageValue: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponsePageResultAppUserDeviceVO>}
+ */
+export const appUserDeviceGet_page_list = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/appUserDevice/get_page_list.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 修改密码
+ * @param {{ email: string, password: string, newPassword: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseString>}
+ */
+export const appUserUpdatePassword = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/appUser/updatePassword.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 登出
+ * @param {{ id: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseString>}
+ */
+export const appUserLoginOut = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/appUser/loginOut.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 邮箱和密码登录
+ * @param {{ email: string, password: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseAppUserVO>}
+ */
+export const appUserLoginByPasswordAndEmail = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/appUser/loginByPasswordAndEmail.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 按分页获取列表
+ * @param {{ pageNo?: number, pageSize?: number, isDeleted?: string, orderWhat: string, orderHow: string, pageValue: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponsePageResultAppUser>}
+ */
+export const appUserGet_page_list = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/appUser/get_page_list.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 获取列表
+ * @param {{ isDeleted?: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseListAppUser>}
+ */
+export const appUserGetAppUserList = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/appUser/getAppUserList.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 删除
+ * @param {{ id: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseString>}
+ */
+export const appUserDeleteAppUser = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/appUser/deleteAppUser.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 按分页获取列表
+ * @param {{ pageNo?: number, pageSize?: number, languageGroupId: string, isDeleted?: string, languageCode: string, orderWhat: string, orderHow: string, pageValue: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponsePageResultTranslation>}
+ */
+export const anonTranslationGet_page_list = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/translation/get_page_list.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 根据主键查询详情
+ * @param {{ id: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseSuggestion>}
+ */
+export const anonSuggestionSelect_by_id = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/suggestion/select_by_id.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 按分页获取列表
+ * @param {{ pageNo?: number, pageSize?: number, email: string, isDeleted?: string, orderWhat: string, orderHow: string, pageValue: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponsePageResultSuggestion>}
+ */
+export const anonSuggestionGet_page_list = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/suggestion/get_page_list.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 根据主键查询详情
+ * @param {{ id: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponsePushString>}
+ */
+export const anonPushstringSelect_detail = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/pushstring/select_detail.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 查询PushString列表
+ * @param {{ limit: number, offset: number, isDeleted: string, pushType: string, startTime: string, endTime: string, pushContent: string, language: string, deviceKeyid: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponsePageResultPushStringVODTO>}
+ */
+export const anonPushstringGet_pushstring_list_checkread = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/pushstring/get_pushstring_list_checkread.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 查询PushString列表(查不出未到推送时间的)
+ * @param {{ limit: number, offset: number, isDeleted: string, pushType: string, startTime: string, endTime: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponsePageResultPushStringVO>}
+ */
+export const anonPushstringGet_pushstring_list_beforenow = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/pushstring/get_pushstring_list_beforenow.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 查询PushString列表
+ * @param {{ limit: number, offset: number, isDeleted: string, pushType: string, startTime: string, endTime: string, nowTime: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponsePageResultPushStringVO>}
+ */
+export const anonPushstringGet_pushstring_list = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/pushstring/get_pushstring_list.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * getReadCountAndTotalCount
+ * @param {{ deviceKeyid: string, language: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseMapStringObject>}
+ */
+export const anonPushstringGetReadCountAndTotalCount = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/pushstring/getReadCountAndTotalCount.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * allToRead
+ * @param {{ deviceKeyid: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseString>}
+ */
+export const anonPushstringAllToRead = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/pushstring/allToRead.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 根据主键查询详情
+ * @param {{ id: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseOta>}
+ */
+export const anonOtaSelect_detail = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/ota/select_detail.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 根据硬件版本号查询详情
+ * @param {{ hardwareVersion: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseOta>}
+ */
+export const anonOtaSelect_by_hv = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/ota/select_by_hv.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 按分页获取列表
+ * @param {{ pageNo?: number, pageSize?: number, deviceName?: string, isDeleted?: string, productKeyid: string, softwareVersion: string, hardwareVersion: string, chipNo: string, orderWhat: string, orderHow: string, pageValue: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponsePageResultOtaVO>}
+ */
+export const anonOtaGet_page_list = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/ota/get_page_list.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 根据主键查询详情
+ * @param {{ id: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseLaunchPageFile>}
+ */
+export const anonLaunchPageFileSelect_detail = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/launchPageFile/select_detail.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 查询LaunchPageFile列表
+ * @param {{ limit: number, offset: number, isDeleted: string, launchPageKeyid: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponsePageResultLaunchPageFile>}
+ */
+export const anonLaunchPageFileGet_LaunchPageFile_list = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/launchPageFile/get_LaunchPageFile_list.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 根据主键查询详情
+ * @param {{ id: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseLaunchPage>}
+ */
+export const anonLaunchPageSelect_detail = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/launchPage/select_detail.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 查询LaunchPage列表
+ * @param {{ limit: number, offset: number, isDeleted: string, oemKeyid: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponsePageResultLaunchPage>}
+ */
+export const anonLaunchPageGet_LaunchPage_list = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/launchPage/get_LaunchPage_list.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 根据主键查询详情
+ * @param {{ id: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseEqTest>}
+ */
+export const anonEqTestSelect_by_id = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/eqTest/select_by_id.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 按分页获取列表
+ * @param {{ ageStart: string, ageEnd: string, gender: string, phoneSystem: string, areaName: string, userKeyid: string, devicetypeKeyid: string, pageNo?: number, pageSize?: number, isDeleted?: string, orderWhat: string, orderHow: string, pageValue: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponsePageResultEqTest>}
+ */
+export const anonEqTestGet_page_list = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/eqTest/get_page_list.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 获取邮箱验证码(找回密码)
+ * @param {{ email: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseString>}
+ */
+export const anonEmailSend_email_code_updatepassword = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/email/send_email_code_updatepassword.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 获取邮箱验证码(绑定变更)
+ * @param {{ email: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseString>}
+ */
+export const anonEmailSend_email_code_updatebind = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/email/send_email_code_updatebind.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 获取邮箱验证码(注册)
+ * @param {{ email: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseString>}
+ */
+export const anonEmailSend_email_code_register = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/email/send_email_code_register.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 获取邮箱验证码(登陆)
+ * @param {{ email: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseString>}
+ */
+export const anonEmailSend_email_code_login = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/email/send_email_code_login.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 获取邮箱验证码(同意绑定变更)
+ * @param {{ email: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseString>}
+ */
+export const anonEmailSend_email_code_agreebind = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/email/send_email_code_agreebind.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 根据主键查询详情
+ * @param {{ id: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseDiscover>}
+ */
+export const anonDiscoverSelect_by_id = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/discover/select_by_id.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 按分页获取列表
+ * @param {{ pageNo?: number, pageSize?: number, discoverType: string, isDeleted?: string, orderWhat: string, orderHow: string, pageValue: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponsePageResultDiscoverVO>}
+ */
+export const anonDiscoverGet_page_list = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/discover/get_page_list.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 根据主键查询详情
+ * @param {{ id: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseDeviceType>}
+ */
+export const anonDeviceTypeSelect_by_id = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/deviceType/select_by_id.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 按分页获取列表
+ * @param {{ pageNo?: number, pageSize?: number, deviceName: string, isDeleted?: string, earphoneName: string, orderWhat: string, orderHow: string, pageValue: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponsePageResultDeviceType>}
+ */
+export const anonDeviceTypeGet_page_list = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/deviceType/get_page_list.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 按分页获取列表
+ * @param {{ pageNo?: number, pageSize?: number, deviceKeyid: string, isDeleted?: string, messageKeyid: string, orderWhat: string, orderHow: string, pageValue: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponsePageResultDeviceMessage>}
+ */
+export const anonDeviceMessageGet_page_list = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/deviceMessage/get_page_list.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 根据mac更新经纬度
+ * @param {{ mac: string, lat: string, lng: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseDeviceVO>}
+ */
+export const anonDeviceUpdateLatLngByMAC = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/device/updateLatLngByMAC.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 根据mac查询详情
+ * @param {{ mac: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseDeviceVO>}
+ */
+export const anonDeviceSelect_by_mac = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/device/select_by_mac.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 根据主键查询详情
+ * @param {{ id: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseDeviceVO>}
+ */
+export const anonDeviceSelect_by_id = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/device/select_by_id.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 按分页获取列表
+ * @param {{ pageNo?: number, pageSize?: number, isDeleted?: string, devicetypeKeyid: string, orderWhat: string, orderHow: string, pageValue: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponsePageResultDeviceVO>}
+ */
+export const anonDeviceGet_page_list = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/device/get_page_list.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 按分页获取列表
+ * @param {{ appUserKeyid: string, deviceKeyid: string, isDeleted?: string, pageNo?: number, pageSize?: number, orderWhat: string, orderHow: string, pageValue: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponsePageResultAppUserDeviceVO>}
+ */
+export const anonAppUserDeviceGet_page_list = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/appUserDevice/get_page_list.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 按主键删除
+ * @param {{ id: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseString>}
+ */
+export const anonAppUserDeviceDelete = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/appUserDevice/delete.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 修改密码
+ * @param {{ email: string, password: string, newPassword: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseString>}
+ */
+export const anonAppUserUpdatePassword = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/appUser/updatePassword.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 获取统计数据（区域）
+ * @param {{  }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseMapStringObject>}
+ */
+export const anonAppUserSelectStatisticsCountry = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/appUser/selectStatisticsCountry.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 发送重置密码链接
+ * @param {{ email: string, language: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseString>}
+ */
+export const anonAppUserReSetPasswordDoSendEmail = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/appUser/reSetPasswordDoSendEmail.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 重置密码
+ * @param {{ key: string, password: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseString>}
+ */
+export const anonAppUserReSetPassword = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/appUser/reSetPassword.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 重新发送激活链接
+ * @param {{ id: string, language: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseString>}
+ */
+export const anonAppUserReSendEmailURL = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/appUser/reSendEmailURL.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 登出
+ * @param {{ id: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseString>}
+ */
+export const anonAppUserLoginOut = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/appUser/loginOut.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 邮箱和密码登录
+ * @param {{ email: string, password: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseAppUserVO>}
+ */
+export const anonAppUserLoginByPasswordAndEmail = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/appUser/loginByPasswordAndEmail.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 按分页获取列表
+ * @param {{ isDeleted?: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseListAppUser>}
+ */
+export const anonAppUserGetAppUserList = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/appUser/getAppUserList.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 激活用户(邮件里面用)
+ * @param {{ key: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<string>}
+ */
+export const anonAppUserDookuser = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/appUser/dookuser.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 删除
+ * @param {{ id: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseString>}
+ */
+export const anonAppUserDeleteAppUser = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/appUser/deleteAppUser.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 校验登录
+ * @param {{  }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseString>}
+ */
+export const anonAppUserCheckLogin = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/appUser/checkLogin.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 邮箱校验
+ * @param {{ email: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseAppUserVO>}
+ */
+export const anonAppUserCheckEmail = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/appUser/checkEmail.json',
+    params,
+    ...config
+  })
+}       
+          
+
+/**
+ * 注册新用户
+ * @param {{ email: string, password: string, username: string, country: string, userIcon: string, language: string }} params
+ * @param {import('axios').AxiosRequestConfig} config
+ * @returns {Promise<ServerResponseAppUser>}
+ */
+export const anonAppUserAddNewUser = (params, config = {}) => {
+  return request.request({
+    method: 'get',
+    url: '/anon/appUser/addNewUser.json',
+    params,
+    ...config
+  })
+}       
+          
+"
+`;
+
+exports[`codegen > should return code 2`] = `
+"
+interface UserParam {
+  id?: string,
+  username: string,
+  telephone: string,
+  mail: string,
+  deptId: string,
+  status: number,
+  remark?: string
+}      
+
+interface ServerResponseSysUser {
+  status?: number,
+  msg?: string,
+  data?: SysUser
+}      
+
+interface SysUser {
+  id?: string,
+  username?: string,
+  telephone?: string,
+  mail?: string,
+  password?: string,
+  deptKeyid?: string,
+  remark?: string,
+  operator?: string,
+  operateTime?: string,
+  createTime?: string,
+  updateTime?: string,
+  operateIp?: string,
+  status?: number
+}      
+
+interface RoleParam {
+  id?: string,
+  name: string,
+  type?: number,
+  status: number,
+  remark?: string
+}      
+
+interface ServerResponseSysRole {
+  status?: number,
+  msg?: string,
+  data?: SysRole
+}      
+
+interface SysRole {
+  id?: string,
+  name?: string,
+  operator?: string,
+  operateTime?: string,
+  createTime?: string,
+  updateTime?: string,
+  operateIp?: string,
+  status?: number,
+  type?: number,
+  remark?: string
+}      
+
+interface DeptParam {
+  id?: string,
+  name: string,
+  parentId?: string,
+  seq: number,
+  remark?: string
+}      
+
+interface ServerResponseSysDept {
+  status?: number,
+  msg?: string,
+  data?: SysDept
+}      
+
+interface SysDept {
+  id?: string,
+  name?: string,
+  level?: string,
+  seq?: number,
+  remark?: string,
+  parentId?: string,
+  operator?: string,
+  operateTime?: string,
+  createTime?: string,
+  updateTime?: string,
+  operateIp?: string,
+  isDeleted?: number
+}      
+
+interface AclModuleParam {
+  id?: string,
+  name: string,
+  parentId?: string,
+  seq: number,
+  status: number,
+  remark?: string
+}      
+
+interface ServerResponseSysAclModule {
+  status?: number,
+  msg?: string,
+  data?: SysAclModule
+}      
+
+interface SysAclModule {
+  id?: string,
+  name?: string,
+  parentId?: string,
+  level?: string,
+  seq?: number,
+  remark?: string,
+  operator?: string,
+  operateTime?: string,
+  createTime?: string,
+  updateTime?: string,
+  operateIp?: string,
+  status?: number
+}      
+
+interface AclParam {
+  id?: string,
+  name: string,
+  aclModuleKeyid: string,
+  url?: string,
+  type: number,
+  status: number,
+  seq: number,
+  remark?: string
+}      
+
+interface ServerResponseSysAcl {
+  status?: number,
+  msg?: string,
+  data?: SysAcl
+}      
+
+interface SysAcl {
+  id?: string,
+  name?: string,
+  code?: string,
+  aclModuleKeyid?: string,
+  url?: string,
+  seq?: number,
+  remark?: string,
+  operator?: string,
+  operateTime?: string,
+  createTime?: string,
+  updateTime?: string,
+  operateIp?: string,
+  status?: number,
+  type?: number
+}      
+
+interface Ota {
+  id?: string,
+  isDeleted?: number,
+  updateTs?: string,
+  createTs?: string,
+  createUserId?: string,
+  updateUserId?: string,
+  otaName2?: string,
+  otaName1?: string,
+  otaName?: string,
+  otaDescribe?: string,
+  hardwareVersion?: string,
+  softwareVersion?: string,
+  s3Key?: string,
+  ossUrl?: string,
+  ossUrl1?: string,
+  ossUrl2?: string,
+  chipNo?: string,
+  productKeyid?: string,
+  weightValue?: number,
+  firmName?: string
+}      
+
+interface ServerResponseOta {
+  status?: number,
+  msg?: string,
+  data?: Ota
+}      
+
+interface LaunchPageFile {
+  id?: string,
+  isDeleted?: number,
+  updateTs?: string,
+  createTs?: string,
+  createUserId?: string,
+  updateUserId?: string,
+  launchPageKeyid?: string,
+  s3Key?: string,
+  weight?: number,
+  ossUrl?: string,
+  jumpAddress?: string,
+  ossUrl1?: string,
+  ossUrl2?: string
+}      
+
+interface ServerResponseLaunchPageFile {
+  status?: number,
+  msg?: string,
+  data?: LaunchPageFile
+}      
+
+interface LaunchPage {
+  id?: string,
+  isDeleted?: number,
+  updateTs?: string,
+  createTs?: string,
+  createUserId?: string,
+  updateUserId?: string,
+  oemKeyid?: string,
+  pageSize?: number,
+  launchPageVersion?: string,
+  isUse?: string,
+  files?: Array<LaunchPageFile>
+}      
+
+interface ServerResponseLaunchPage {
+  status?: number,
+  msg?: string,
+  data?: LaunchPage
+}      
+
+interface DeviceTypeParam {
+  id?: string,
+  deviceName: string,
+  earphoneName: string,
+  samplesQuantity: string,
+  provideSamplesSchedule?: string,
+  picture?: string,
+  isDeleted?: number
+}      
+
+interface DeviceType {
+  id?: string,
+  isDeleted?: number,
+  createUserId?: string,
+  updateUserId?: string,
+  createTs?: string,
+  updateTs?: string,
+  samplesQuantity?: string,
+  provideSamplesSchedule?: string,
+  samplesPhotoes?: string,
+  earphoneName?: string,
+  deviceName?: string,
+  picture?: string
+}      
+
+interface ServerResponseDeviceType {
+  status?: number,
+  msg?: string,
+  data?: DeviceType
+}      
+
+interface DeviceParam {
+  id?: string,
+  devicetypeKeyid: string,
+  isDeleted?: number,
+  mac?: string,
+  lat?: string,
+  lng?: string,
+  deviceName?: string
+}      
+
+interface Device {
+  id?: string,
+  deviceName?: string,
+  devicetypeKeyid?: string,
+  isDeleted?: number,
+  createUserId?: string,
+  updateUserId?: string,
+  createTs?: string,
+  updateTs?: string,
+  mac?: string,
+  lat?: string,
+  lng?: string
+}      
+
+interface ServerResponseDevice {
+  status?: number,
+  msg?: string,
+  data?: Device
+}      
+
+interface AppUserDeviceParam {
+  id?: string,
+  deviceKeyid?: string,
+  isDeleted?: number,
+  appUserKeyid?: string
+}      
+
+interface AppUserDevice {
+  id?: string,
+  isDeleted?: number,
+  createUserId?: string,
+  updateUserId?: string,
+  createTs?: string,
+  updateTs?: string,
+  userKeyid?: string,
+  deviceKeyid?: string
+}      
+
+interface ServerResponseAppUserDevice {
+  status?: number,
+  msg?: string,
+  data?: AppUserDevice
+}      
+
+interface AppUserDeviceAndDeviceParam {
+  appUserDeviceParam?: AppUserDeviceParam,
+  deviceParam?: DeviceParam
+}      
+
+interface AppUserParam {
+  id?: string,
+  username: string,
+  email: string,
+  password?: string,
+  isDeleted?: number,
+  lat?: string,
+  lng?: string,
+  userIcon?: string,
+  country?: string
+}      
+
+interface AppUser {
+  id?: string,
+  username?: string,
+  password?: string,
+  isDeleted?: number,
+  createUserId?: string,
+  updateUserId?: string,
+  createTs?: string,
+  updateTs?: string,
+  email?: string,
+  accountStatus?: string,
+  lat?: string,
+  lng?: string,
+  country?: string,
+  userIcon?: string
+}      
+
+interface ServerResponseAppUser {
+  status?: number,
+  msg?: string,
+  data?: AppUser
+}      
+
+interface ServerResponseString {
+  status?: number,
+  msg?: string,
+  data?: string
+}      
+
+interface TranslationParam {
+  id?: string,
+  languageCode?: string,
+  languageGroupId?: string,
+  languageValue?: string,
+  isDeleted?: number
+}      
+
+interface ServerResponseTranslation {
+  status?: number,
+  msg?: string,
+  data?: Translation
+}      
+
+interface Translation {
+  id?: string,
+  isDeleted?: number,
+  createUserId?: string,
+  updateUserId?: string,
+  createTs?: string,
+  updateTs?: string,
+  languageCode?: string,
+  languageGroupId?: string,
+  languageValue?: string
+}      
+
+interface SuggestionParam {
+  id?: string,
+  suggestionContent?: string,
+  url1?: string,
+  url2?: string,
+  url3?: string,
+  url4?: string,
+  url5?: string,
+  url6?: string,
+  url7?: string,
+  url8?: string,
+  url9?: string,
+  email?: string
+}      
+
+interface ServerResponseSuggestion {
+  status?: number,
+  msg?: string,
+  data?: Suggestion
+}      
+
+interface Suggestion {
+  id?: string,
+  isDeleted?: number,
+  createUserId?: string,
+  updateUserId?: string,
+  createTs?: string,
+  updateTs?: string,
+  suggestionContent?: string,
+  url1?: string,
+  url2?: string,
+  url3?: string,
+  url4?: string,
+  url5?: string,
+  url6?: string,
+  url7?: string,
+  url8?: string,
+  url9?: string,
+  email?: string
+}      
+
+interface PushString {
+  id?: string,
+  isDeleted?: number,
+  updateTs?: string,
+  createTs?: string,
+  createUserId?: string,
+  updateUserId?: string,
+  pushTime?: string,
+  pushType?: string,
+  jumpUrl?: string,
+  iconUrl?: string,
+  pushTitle?: string,
+  pushTitle2?: string,
+  language?: string,
+  pushContent?: string
+}      
+
+interface PushStringFullVO {
+  secret?: string,
+  value?: string,
+  scene?: string,
+  pushString?: PushString
+}      
+
+interface ServerResponsePushString {
+  status?: number,
+  msg?: string,
+  data?: PushString
+}      
+
+interface EqTestParam {
+  id?: string,
+  isDeleted?: number,
+  updateTs?: string,
+  createTs?: string,
+  createUserId?: string,
+  updateUserId?: string,
+  eqName?: string,
+  userKeyid?: string,
+  eqJsonString?: string,
+  pairingName?: string,
+  eqJsonString2?: string,
+  eq1?: number,
+  eq2?: number,
+  eq3?: number,
+  eq4?: number,
+  eq5?: number,
+  eq6?: number,
+  eq7?: number,
+  eq8?: number,
+  eq9?: number,
+  eq10?: number,
+  gender?: string,
+  qsJsonString?: string,
+  freqJsonString?: string,
+  age?: number,
+  areaName?: string,
+  phoneSystem?: string,
+  masterGain?: number,
+  devicetypeKeyid?: string
+}      
+
+interface EqTest {
+  id?: string,
+  isDeleted?: number,
+  updateTs?: string,
+  createTs?: string,
+  createUserId?: string,
+  updateUserId?: string,
+  eqName?: string,
+  userKeyid?: string,
+  eqJsonString?: string,
+  pairingName?: string,
+  qsJsonString?: string,
+  eqJsonString2?: string,
+  eq1?: number,
+  eq2?: number,
+  eq3?: number,
+  eq4?: number,
+  eq5?: number,
+  eq6?: number,
+  eq7?: number,
+  eq8?: number,
+  eq9?: number,
+  eq10?: number,
+  gender?: string,
+  age?: number,
+  areaName?: string,
+  freqJsonString?: string,
+  phoneSystem?: string,
+  masterGain?: number,
+  devicetypeKeyid?: string
+}      
+
+interface ServerResponseEqTest {
+  status?: number,
+  msg?: string,
+  data?: EqTest
+}      
+
+interface DiscoverParam {
+  id?: string,
+  isDeleted?: number,
+  updateTs?: string,
+  createTs?: string,
+  createUserId?: string,
+  updateUserId?: string,
+  title?: string,
+  discoverType?: string,
+  discoverContent?: string,
+  discoverPicture?: string
+}      
+
+interface Discover {
+  id?: string,
+  isDeleted?: number,
+  updateTs?: string,
+  createTs?: string,
+  createUserId?: string,
+  updateUserId?: string,
+  title?: string,
+  discoverType?: string,
+  discoverContent?: string,
+  discoverPicture?: string
+}      
+
+interface ServerResponseDiscover {
+  status?: number,
+  msg?: string,
+  data?: Discover
+}      
+
+interface DeviceMessageParam {
+  id?: string,
+  deviceKeyid?: string,
+  messageKeyid?: string,
+  isDeleted?: number
+}      
+
+interface DeviceMessage {
+  id?: string,
+  isDeleted?: number,
+  updateTs?: string,
+  createTs?: string,
+  createUserId?: string,
+  updateUserId?: string,
+  deviceKeyid?: string,
+  messageKeyid?: string
+}      
+
+interface ServerResponseDeviceMessage {
+  status?: number,
+  msg?: string,
+  data?: DeviceMessage
+}      
+
+interface ServerResponseObject {
+  status?: number,
+  msg?: string,
+  data?: object
+}      
+
+interface AclDto {
+  id?: string,
+  name?: string,
+  code?: string,
+  aclModuleKeyid?: string,
+  url?: string,
+  seq?: number,
+  remark?: string,
+  operator?: string,
+  operateTime?: string,
+  createTime?: string,
+  updateTime?: string,
+  operateIp?: string,
+  status?: number,
+  type?: number,
+  checked?: boolean,
+  hasAcl?: boolean
+}      
+
+interface AclModuleLevelDto {
+  id?: string,
+  name?: string,
+  parentId?: string,
+  level?: string,
+  seq?: number,
+  remark?: string,
+  operator?: string,
+  operateTime?: string,
+  createTime?: string,
+  updateTime?: string,
+  operateIp?: string,
+  status?: number,
+  aclList?: Array<AclDto>
+}      
+
+interface ServerResponseListAclModuleLevelDto {
+  status?: number,
+  msg?: string,
+  data?: Array<AclModuleLevelDto>
+}      
+
+interface ServerResponseMapStringObject {
+  status?: number,
+  msg?: string,
+  data?: object
+}      
+
+interface PageResultSysUser {
+  data?: Array<SysUser>,
+  total?: number
+}      
+
+interface ServerResponsePageResultSysUser {
+  status?: number,
+  msg?: string,
+  data?: PageResultSysUser
+}      
+
+interface ServerResponseMapStringListSysUser {
+  status?: number,
+  msg?: string,
+  data?: object
+}      
+
+interface ServerResponseListSysRole {
+  status?: number,
+  msg?: string,
+  data?: Array<SysRole>
+}      
+
+interface PageResultSysLogWithBLOBs {
+  data?: Array<SysLogWithBLOBs>,
+  total?: number
+}      
+
+interface ServerResponsePageResultSysLogWithBLOBs {
+  status?: number,
+  msg?: string,
+  data?: PageResultSysLogWithBLOBs
+}      
+
+interface SysLogWithBLOBs {
+  id?: string,
+  targetId?: string,
+  type?: number,
+  operator?: string,
+  operateTime?: string,
+  createTime?: string,
+  updateTime?: string,
+  operateIp?: string,
+  status?: number,
+  oldValue?: string,
+  newValue?: string
+}      
+
+interface DeptLevelDto {
+  id?: string,
+  name?: string,
+  level?: string,
+  seq?: number,
+  remark?: string,
+  parentId?: string,
+  operator?: string,
+  operateTime?: string,
+  createTime?: string,
+  updateTime?: string,
+  operateIp?: string,
+  isDeleted?: number
+}      
+
+interface ServerResponseListDeptLevelDto {
+  status?: number,
+  msg?: string,
+  data?: Array<DeptLevelDto>
+}      
+
+interface PageResultSysAcl {
+  data?: Array<SysAcl>,
+  total?: number
+}      
+
+interface ServerResponsePageResultSysAcl {
+  status?: number,
+  msg?: string,
+  data?: PageResultSysAcl
+}      
+
+interface OtaVO {
+  id?: string,
+  isDeleted?: number,
+  updateTs?: string,
+  createTs?: string,
+  createUserId?: string,
+  updateUserId?: string,
+  otaName2?: string,
+  otaName1?: string,
+  otaName?: string,
+  otaDescribe?: string,
+  hardwareVersion?: string,
+  softwareVersion?: string,
+  s3Key?: string,
+  ossUrl?: string,
+  ossUrl1?: string,
+  ossUrl2?: string,
+  chipNo?: string,
+  productKeyid?: string,
+  weightValue?: number,
+  firmName?: string,
+  otaDescribeTran?: Array<Translation>
+}      
+
+interface PageResultOtaVO {
+  data?: Array<OtaVO>,
+  total?: number
+}      
+
+interface ServerResponsePageResultOtaVO {
+  status?: number,
+  msg?: string,
+  data?: PageResultOtaVO
+}      
+
+interface PageResultLaunchPageFile {
+  data?: Array<LaunchPageFile>,
+  total?: number
+}      
+
+interface ServerResponsePageResultLaunchPageFile {
+  status?: number,
+  msg?: string,
+  data?: PageResultLaunchPageFile
+}      
+
+interface PageResultLaunchPage {
+  data?: Array<LaunchPage>,
+  total?: number
+}      
+
+interface ServerResponsePageResultLaunchPage {
+  status?: number,
+  msg?: string,
+  data?: PageResultLaunchPage
+}      
+
+interface PageResultDeviceType {
+  data?: Array<DeviceType>,
+  total?: number
+}      
+
+interface ServerResponsePageResultDeviceType {
+  status?: number,
+  msg?: string,
+  data?: PageResultDeviceType
+}      
+
+interface DeviceVO {
+  id?: string,
+  deviceName?: string,
+  devicetypeKeyid?: string,
+  isDeleted?: number,
+  createUserId?: string,
+  updateUserId?: string,
+  createTs?: string,
+  updateTs?: string,
+  mac?: string,
+  lat?: string,
+  lng?: string,
+  deviceType?: DeviceType
+}      
+
+interface ServerResponseDeviceVO {
+  status?: number,
+  msg?: string,
+  data?: DeviceVO
+}      
+
+interface PageResultDeviceVO {
+  data?: Array<DeviceVO>,
+  total?: number
+}      
+
+interface ServerResponsePageResultDeviceVO {
+  status?: number,
+  msg?: string,
+  data?: PageResultDeviceVO
+}      
+
+interface AppUserDeviceVO {
+  id?: string,
+  isDeleted?: number,
+  createUserId?: string,
+  updateUserId?: string,
+  createTs?: string,
+  updateTs?: string,
+  userKeyid?: string,
+  deviceKeyid?: string,
+  appUser?: AppUser,
+  device?: Device
+}      
+
+interface PageResultAppUserDeviceVO {
+  data?: Array<AppUserDeviceVO>,
+  total?: number
+}      
+
+interface ServerResponsePageResultAppUserDeviceVO {
+  status?: number,
+  msg?: string,
+  data?: PageResultAppUserDeviceVO
+}      
+
+interface AppUserVO {
+  id?: string,
+  username?: string,
+  password?: string,
+  isDeleted?: number,
+  createUserId?: string,
+  updateUserId?: string,
+  createTs?: string,
+  updateTs?: string,
+  email?: string,
+  accountStatus?: string,
+  lat?: string,
+  lng?: string,
+  country?: string,
+  userIcon?: string,
+  corelinkToken?: string
+}      
+
+interface ServerResponseAppUserVO {
+  status?: number,
+  msg?: string,
+  data?: AppUserVO
+}      
+
+interface PageResultAppUser {
+  data?: Array<AppUser>,
+  total?: number
+}      
+
+interface ServerResponsePageResultAppUser {
+  status?: number,
+  msg?: string,
+  data?: PageResultAppUser
+}      
+
+interface ServerResponseListAppUser {
+  status?: number,
+  msg?: string,
+  data?: Array<AppUser>
+}      
+
+interface PageResultTranslation {
+  data?: Array<Translation>,
+  total?: number
+}      
+
+interface ServerResponsePageResultTranslation {
+  status?: number,
+  msg?: string,
+  data?: PageResultTranslation
+}      
+
+interface PageResultSuggestion {
+  data?: Array<Suggestion>,
+  total?: number
+}      
+
+interface ServerResponsePageResultSuggestion {
+  status?: number,
+  msg?: string,
+  data?: PageResultSuggestion
+}      
+
+interface PageResultPushStringVODTO {
+  data?: Array<PushStringVODTO>,
+  total?: number
+}      
+
+interface PushStringVODTO {
+  id?: string,
+  isDeleted?: number,
+  updateTs?: string,
+  createTs?: string,
+  createUserId?: string,
+  updateUserId?: string,
+  pushTime?: string,
+  pushType?: string,
+  pushContent?: string,
+  pushContentTran?: Array<Translation>,
+  iconUrl?: string,
+  jumpUrl?: string,
+  pushTitle?: string,
+  pushTitleTran?: Array<Translation>,
+  hasRead?: boolean
+}      
+
+interface ServerResponsePageResultPushStringVODTO {
+  status?: number,
+  msg?: string,
+  data?: PageResultPushStringVODTO
+}      
+
+interface PageResultPushStringVO {
+  data?: Array<PushStringVO>,
+  total?: number
+}      
+
+interface PushStringVO {
+  id?: string,
+  isDeleted?: number,
+  updateTs?: string,
+  createTs?: string,
+  createUserId?: string,
+  updateUserId?: string,
+  pushTime?: string,
+  pushType?: string,
+  pushContent?: string,
+  pushContentTran?: Array<Translation>,
+  iconUrl?: string,
+  jumpUrl?: string,
+  pushTitle?: string,
+  pushTitleTran?: Array<Translation>
+}      
+
+interface ServerResponsePageResultPushStringVO {
+  status?: number,
+  msg?: string,
+  data?: PageResultPushStringVO
+}      
+
+interface PageResultEqTest {
+  data?: Array<EqTest>,
+  total?: number
+}      
+
+interface ServerResponsePageResultEqTest {
+  status?: number,
+  msg?: string,
+  data?: PageResultEqTest
+}      
+
+interface DiscoverVO {
+  id?: string,
+  isDeleted?: number,
+  updateTs?: string,
+  createTs?: string,
+  createUserId?: string,
+  updateUserId?: string,
+  title?: string,
+  discoverType?: string,
+  discoverContent?: string,
+  discoverPicture?: string,
+  titleTran?: Array<Translation>
+}      
+
+interface PageResultDiscoverVO {
+  data?: Array<DiscoverVO>,
+  total?: number
+}      
+
+interface ServerResponsePageResultDiscoverVO {
+  status?: number,
+  msg?: string,
+  data?: PageResultDiscoverVO
+}      
+
+interface PageResultDeviceMessage {
+  data?: Array<DeviceMessage>,
+  total?: number
+}      
+
+interface ServerResponsePageResultDeviceMessage {
+  status?: number,
+  msg?: string,
+  data?: PageResultDeviceMessage
+}      
+"
+`;
