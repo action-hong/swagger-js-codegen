@@ -58,7 +58,7 @@ function getAPIName(path: string) {
   // 去掉后缀名和斜杠, 驼峰法合起来
   return path.replace(/\.json/, '')
     .slice(1)
-    .replace(/\/(\w)/g, (_, $1) => $1.toUpperCase())
+    .replace(/[\/_](\w)/g, (_, $1) => $1.toUpperCase())
 }
 
 function getRequestParmas(method: string, meta: any) {

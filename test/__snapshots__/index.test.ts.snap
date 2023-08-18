@@ -728,7 +728,7 @@ export const userLogin = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponseListAclModuleLevelDto>}
  */
-export const sysUserUser_acltree = (params, config = {}) => {
+export const sysUserUserAcltree = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/sysUser/user_acltree.json',
@@ -760,7 +760,7 @@ export const sysUserResetPassword = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponseMapStringObject>}
  */
-export const sysUserNotneedloginGet_userinfo = (params, config = {}) => {
+export const sysUserNotneedloginGetUserinfo = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/sysUser/notneedlogin/get_userinfo.json',
@@ -792,7 +792,7 @@ export const sysUserModifyPassword = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponsePageResultSysUser>}
  */
-export const sysUserGet_page_by_deptkeyid = (params, config = {}) => {
+export const sysUserGetPageByDeptkeyid = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/sysUser/get_page_by_deptkeyid.json',
@@ -920,7 +920,7 @@ export const sysLogRecover = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponsePageResultSysLogWithBLOBs>}
  */
-export const sysLogGet_page_by_Logmodulekeyid = (params, config = {}) => {
+export const sysLogGetPageByLogmodulekeyid = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/sysLog/get_page_by_Logmodulekeyid.json',
@@ -1000,7 +1000,7 @@ export const sysAclModuleDelete = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponsePageResultSysAcl>}
  */
-export const sysAclGet_page_by_aclmodulekeyid = (params, config = {}) => {
+export const sysAclGetPageByAclmodulekeyid = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/sysAcl/get_page_by_aclmodulekeyid.json',
@@ -1048,7 +1048,7 @@ export const sysAclAcls = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponseOta>}
  */
-export const otaSelect_detail = (params, config = {}) => {
+export const otaSelectDetail = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/ota/select_detail.json',
@@ -1064,7 +1064,7 @@ export const otaSelect_detail = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponseOta>}
  */
-export const otaSelect_by_hv = (params, config = {}) => {
+export const otaSelectByHv = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/ota/select_by_hv.json',
@@ -1080,7 +1080,7 @@ export const otaSelect_by_hv = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponsePageResultOtaVO>}
  */
-export const otaGet_page_list = (params, config = {}) => {
+export const otaGetPageList = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/ota/get_page_list.json',
@@ -1096,7 +1096,7 @@ export const otaGet_page_list = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponseLaunchPageFile>}
  */
-export const launchPageFileSelect_detail = (params, config = {}) => {
+export const launchPageFileSelectDetail = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/launchPageFile/select_detail.json',
@@ -1112,7 +1112,7 @@ export const launchPageFileSelect_detail = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponsePageResultLaunchPageFile>}
  */
-export const launchPageFileGet_LaunchPageFile_list = (params, config = {}) => {
+export const launchPageFileGetLaunchPageFileList = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/launchPageFile/get_LaunchPageFile_list.json',
@@ -1128,7 +1128,7 @@ export const launchPageFileGet_LaunchPageFile_list = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponseLaunchPage>}
  */
-export const launchPageSelect_detail = (params, config = {}) => {
+export const launchPageSelectDetail = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/launchPage/select_detail.json',
@@ -1144,7 +1144,7 @@ export const launchPageSelect_detail = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponsePageResultLaunchPage>}
  */
-export const launchPageGet_LaunchPage_list = (params, config = {}) => {
+export const launchPageGetLaunchPageList = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/launchPage/get_LaunchPage_list.json',
@@ -1160,7 +1160,7 @@ export const launchPageGet_LaunchPage_list = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponseDeviceType>}
  */
-export const deviceTypeSelect_by_id = (params, config = {}) => {
+export const deviceTypeSelectById = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/deviceType/select_by_id.json',
@@ -1176,7 +1176,7 @@ export const deviceTypeSelect_by_id = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponsePageResultDeviceType>}
  */
-export const deviceTypeGet_page_list = (params, config = {}) => {
+export const deviceTypeGetPageList = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/deviceType/get_page_list.json',
@@ -1192,7 +1192,7 @@ export const deviceTypeGet_page_list = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponseDeviceVO>}
  */
-export const deviceSelect_by_id = (params, config = {}) => {
+export const deviceSelectById = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/device/select_by_id.json',
@@ -1208,7 +1208,7 @@ export const deviceSelect_by_id = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponsePageResultDeviceVO>}
  */
-export const deviceGet_page_list = (params, config = {}) => {
+export const deviceGetPageList = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/device/get_page_list.json',
@@ -1224,7 +1224,7 @@ export const deviceGet_page_list = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponsePageResultAppUserDeviceVO>}
  */
-export const appUserDeviceGet_page_list = (params, config = {}) => {
+export const appUserDeviceGetPageList = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/appUserDevice/get_page_list.json',
@@ -1288,7 +1288,7 @@ export const appUserLoginByPasswordAndEmail = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponsePageResultAppUser>}
  */
-export const appUserGet_page_list = (params, config = {}) => {
+export const appUserGetPageList = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/appUser/get_page_list.json',
@@ -1336,7 +1336,7 @@ export const appUserDeleteAppUser = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponsePageResultTranslation>}
  */
-export const anonTranslationGet_page_list = (params, config = {}) => {
+export const anonTranslationGetPageList = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/anon/translation/get_page_list.json',
@@ -1352,7 +1352,7 @@ export const anonTranslationGet_page_list = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponseSuggestion>}
  */
-export const anonSuggestionSelect_by_id = (params, config = {}) => {
+export const anonSuggestionSelectById = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/anon/suggestion/select_by_id.json',
@@ -1368,7 +1368,7 @@ export const anonSuggestionSelect_by_id = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponsePageResultSuggestion>}
  */
-export const anonSuggestionGet_page_list = (params, config = {}) => {
+export const anonSuggestionGetPageList = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/anon/suggestion/get_page_list.json',
@@ -1384,7 +1384,7 @@ export const anonSuggestionGet_page_list = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponsePushString>}
  */
-export const anonPushstringSelect_detail = (params, config = {}) => {
+export const anonPushstringSelectDetail = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/anon/pushstring/select_detail.json',
@@ -1400,7 +1400,7 @@ export const anonPushstringSelect_detail = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponsePageResultPushStringVODTO>}
  */
-export const anonPushstringGet_pushstring_list_checkread = (params, config = {}) => {
+export const anonPushstringGetPushstringListCheckread = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/anon/pushstring/get_pushstring_list_checkread.json',
@@ -1416,7 +1416,7 @@ export const anonPushstringGet_pushstring_list_checkread = (params, config = {})
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponsePageResultPushStringVO>}
  */
-export const anonPushstringGet_pushstring_list_beforenow = (params, config = {}) => {
+export const anonPushstringGetPushstringListBeforenow = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/anon/pushstring/get_pushstring_list_beforenow.json',
@@ -1432,7 +1432,7 @@ export const anonPushstringGet_pushstring_list_beforenow = (params, config = {})
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponsePageResultPushStringVO>}
  */
-export const anonPushstringGet_pushstring_list = (params, config = {}) => {
+export const anonPushstringGetPushstringList = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/anon/pushstring/get_pushstring_list.json',
@@ -1480,7 +1480,7 @@ export const anonPushstringAllToRead = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponseOta>}
  */
-export const anonOtaSelect_detail = (params, config = {}) => {
+export const anonOtaSelectDetail = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/anon/ota/select_detail.json',
@@ -1496,7 +1496,7 @@ export const anonOtaSelect_detail = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponseOta>}
  */
-export const anonOtaSelect_by_hv = (params, config = {}) => {
+export const anonOtaSelectByHv = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/anon/ota/select_by_hv.json',
@@ -1512,7 +1512,7 @@ export const anonOtaSelect_by_hv = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponsePageResultOtaVO>}
  */
-export const anonOtaGet_page_list = (params, config = {}) => {
+export const anonOtaGetPageList = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/anon/ota/get_page_list.json',
@@ -1528,7 +1528,7 @@ export const anonOtaGet_page_list = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponseLaunchPageFile>}
  */
-export const anonLaunchPageFileSelect_detail = (params, config = {}) => {
+export const anonLaunchPageFileSelectDetail = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/anon/launchPageFile/select_detail.json',
@@ -1544,7 +1544,7 @@ export const anonLaunchPageFileSelect_detail = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponsePageResultLaunchPageFile>}
  */
-export const anonLaunchPageFileGet_LaunchPageFile_list = (params, config = {}) => {
+export const anonLaunchPageFileGetLaunchPageFileList = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/anon/launchPageFile/get_LaunchPageFile_list.json',
@@ -1560,7 +1560,7 @@ export const anonLaunchPageFileGet_LaunchPageFile_list = (params, config = {}) =
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponseLaunchPage>}
  */
-export const anonLaunchPageSelect_detail = (params, config = {}) => {
+export const anonLaunchPageSelectDetail = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/anon/launchPage/select_detail.json',
@@ -1576,7 +1576,7 @@ export const anonLaunchPageSelect_detail = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponsePageResultLaunchPage>}
  */
-export const anonLaunchPageGet_LaunchPage_list = (params, config = {}) => {
+export const anonLaunchPageGetLaunchPageList = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/anon/launchPage/get_LaunchPage_list.json',
@@ -1592,7 +1592,7 @@ export const anonLaunchPageGet_LaunchPage_list = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponseEqTest>}
  */
-export const anonEqTestSelect_by_id = (params, config = {}) => {
+export const anonEqTestSelectById = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/anon/eqTest/select_by_id.json',
@@ -1608,7 +1608,7 @@ export const anonEqTestSelect_by_id = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponsePageResultEqTest>}
  */
-export const anonEqTestGet_page_list = (params, config = {}) => {
+export const anonEqTestGetPageList = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/anon/eqTest/get_page_list.json',
@@ -1624,7 +1624,7 @@ export const anonEqTestGet_page_list = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponseString>}
  */
-export const anonEmailSend_email_code_updatepassword = (params, config = {}) => {
+export const anonEmailSendEmailCodeUpdatepassword = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/anon/email/send_email_code_updatepassword.json',
@@ -1640,7 +1640,7 @@ export const anonEmailSend_email_code_updatepassword = (params, config = {}) => 
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponseString>}
  */
-export const anonEmailSend_email_code_updatebind = (params, config = {}) => {
+export const anonEmailSendEmailCodeUpdatebind = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/anon/email/send_email_code_updatebind.json',
@@ -1656,7 +1656,7 @@ export const anonEmailSend_email_code_updatebind = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponseString>}
  */
-export const anonEmailSend_email_code_register = (params, config = {}) => {
+export const anonEmailSendEmailCodeRegister = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/anon/email/send_email_code_register.json',
@@ -1672,7 +1672,7 @@ export const anonEmailSend_email_code_register = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponseString>}
  */
-export const anonEmailSend_email_code_login = (params, config = {}) => {
+export const anonEmailSendEmailCodeLogin = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/anon/email/send_email_code_login.json',
@@ -1688,7 +1688,7 @@ export const anonEmailSend_email_code_login = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponseString>}
  */
-export const anonEmailSend_email_code_agreebind = (params, config = {}) => {
+export const anonEmailSendEmailCodeAgreebind = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/anon/email/send_email_code_agreebind.json',
@@ -1704,7 +1704,7 @@ export const anonEmailSend_email_code_agreebind = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponseDiscover>}
  */
-export const anonDiscoverSelect_by_id = (params, config = {}) => {
+export const anonDiscoverSelectById = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/anon/discover/select_by_id.json',
@@ -1720,7 +1720,7 @@ export const anonDiscoverSelect_by_id = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponsePageResultDiscoverVO>}
  */
-export const anonDiscoverGet_page_list = (params, config = {}) => {
+export const anonDiscoverGetPageList = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/anon/discover/get_page_list.json',
@@ -1736,7 +1736,7 @@ export const anonDiscoverGet_page_list = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponseDeviceType>}
  */
-export const anonDeviceTypeSelect_by_id = (params, config = {}) => {
+export const anonDeviceTypeSelectById = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/anon/deviceType/select_by_id.json',
@@ -1752,7 +1752,7 @@ export const anonDeviceTypeSelect_by_id = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponsePageResultDeviceType>}
  */
-export const anonDeviceTypeGet_page_list = (params, config = {}) => {
+export const anonDeviceTypeGetPageList = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/anon/deviceType/get_page_list.json',
@@ -1768,7 +1768,7 @@ export const anonDeviceTypeGet_page_list = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponsePageResultDeviceMessage>}
  */
-export const anonDeviceMessageGet_page_list = (params, config = {}) => {
+export const anonDeviceMessageGetPageList = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/anon/deviceMessage/get_page_list.json',
@@ -1800,7 +1800,7 @@ export const anonDeviceUpdateLatLngByMAC = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponseDeviceVO>}
  */
-export const anonDeviceSelect_by_mac = (params, config = {}) => {
+export const anonDeviceSelectByMac = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/anon/device/select_by_mac.json',
@@ -1816,7 +1816,7 @@ export const anonDeviceSelect_by_mac = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponseDeviceVO>}
  */
-export const anonDeviceSelect_by_id = (params, config = {}) => {
+export const anonDeviceSelectById = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/anon/device/select_by_id.json',
@@ -1832,7 +1832,7 @@ export const anonDeviceSelect_by_id = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponsePageResultDeviceVO>}
  */
-export const anonDeviceGet_page_list = (params, config = {}) => {
+export const anonDeviceGetPageList = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/anon/device/get_page_list.json',
@@ -1848,7 +1848,7 @@ export const anonDeviceGet_page_list = (params, config = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<ServerResponsePageResultAppUserDeviceVO>}
  */
-export const anonAppUserDeviceGet_page_list = (params, config = {}) => {
+export const anonAppUserDeviceGetPageList = (params, config = {}) => {
   return request.request({
     method: 'get',
     url: '/anon/appUserDevice/get_page_list.json',
