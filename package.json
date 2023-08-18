@@ -1,17 +1,17 @@
 {
-  "name": "pkg-name",
+  "name": "@kkopite/swagger-js-codegen",
   "type": "module",
   "version": "0.0.0",
   "packageManager": "pnpm@8.6.10",
   "description": "",
   "author": "kkopite <kkopitehong@foxmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/action-hong/pkg-name#readme",
+  "homepage": "https://github.com/action-hong/swagger-js-codegen#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/action-hong/pkg-name.git"
+    "url": "git+https://github.com/action-hong/swagger-js-codegen.git"
   },
-  "bugs": "https://github.com/action-hong/pkg-name/issues",
+  "bugs": "https://github.com/action-hong/swagger-js-codegen/issues",
   "keywords": [],
   "sideEffects": false,
   "exports": {
@@ -67,5 +67,8 @@
   },
   "lint-staged": {
     "*": "eslint --fix"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
