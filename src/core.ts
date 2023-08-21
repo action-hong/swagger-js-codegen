@@ -86,8 +86,9 @@ function getRequestParmas(method: string, meta: any) {
 
 function getSchemaType(schema: any) {
   let type = 'any'
-  if (!schema)
+  if (!schema) {
     return 'unknown'
+  }
 
   if (schema.$ref) {
     const ref = schema.$ref as string
@@ -95,8 +96,9 @@ function getSchemaType(schema: any) {
   }
   else if (schema.type) {
     type = getMapType(schema.type)
-    if (type === 'array')
+    if (type === 'array') {
       type = `Array<${getSchemaType(schema.items)}>`
+    }
   }
   return type
 }
@@ -106,8 +108,9 @@ const MAP_TYPE: Record<string, string> = {
 }
 
 function getMapType(type: string) {
-  if (type in MAP_TYPE)
+  if (type in MAP_TYPE) {
     return MAP_TYPE[type]
+  }
 
   return type
 }

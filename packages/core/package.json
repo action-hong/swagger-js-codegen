@@ -1,0 +1,38 @@
+{
+  "name": "@clscg/core",
+  "version": "0.0.1",
+  "description": "corelink swagger js codegen",
+  "author": "kkopite <kkopitehong@foxmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/action-hong/swagger-js-codegen/tree/main/packages/core#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/action-hong/swagger-js-codegen.git",
+    "directory": "packages/core"
+  },
+  "bugs": {
+    "url": "https://github.com/action-hong/swagger-js-codegen/issues"
+  },
+  "keywords": [
+    "swagger",
+    "swagger-js-codegen"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "stub": "unbuild --stub"
+  }
+}
