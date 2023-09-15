@@ -1,0 +1,4392 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "SoundMake系统管理模块 API",
+    "description": "SpringDoc API",
+    "license": {
+      "name": "Apache 2.0"
+    },
+    "version": "v1.0.0"
+  },
+  "externalDocs": {
+    "description": "SoundMake系统管理文档"
+  },
+  "servers": [
+    {
+      "url": "http://47.245.35.3:9080",
+      "description": "Generated server url"
+    }
+  ],
+  "tags": [
+    {
+      "name": "SysUserController",
+      "description": "系统用户Controller"
+    },
+    {
+      "name": "LaunchPageController",
+      "description": "LaunchPageController"
+    },
+    {
+      "name": "SysAclController",
+      "description": "权限点Controller"
+    },
+    {
+      "name": "LaunchPageFileController",
+      "description": "LaunchPageFileController"
+    },
+    {
+      "name": "UserController",
+      "description": "用户登陆模块Controller"
+    },
+    {
+      "name": "SensitiveWordController",
+      "description": "敏感词Controller"
+    },
+    {
+      "name": "OtaController",
+      "description": "OtaController"
+    },
+    {
+      "name": "SysAclModuleController",
+      "description": "权限模块Controller"
+    },
+    {
+      "name": "SysRoleController",
+      "description": "角色Controller"
+    },
+    {
+      "name": "CustomeqUserAnonController",
+      "description": "Eq和用户关系Controller(Anon)"
+    },
+    {
+      "name": "SysDeptController",
+      "description": "部门Controller"
+    },
+    {
+      "name": "SysLogController",
+      "description": "系统操作日志Controller"
+    },
+    {
+      "name": "CustomEqController",
+      "description": "自定义EQController"
+    }
+  ],
+  "paths": {
+    "/sysUser/update.soundmake": {
+      "post": {
+        "tags": [
+          "SysUserController"
+        ],
+        "summary": "修改系统用户",
+        "operationId": "updateDept",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserParam"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseSysUser"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sysUser/save.soundmake": {
+      "post": {
+        "tags": [
+          "SysUserController"
+        ],
+        "summary": "新增系统用户账号",
+        "description": "status:1：正常，0：冻结状态,2:删除",
+        "operationId": "saveUser",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserParam"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseSysUser"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sysRole/update.soundmake": {
+      "post": {
+        "tags": [
+          "SysRoleController"
+        ],
+        "summary": "修改角色",
+        "operationId": "updateDept_1",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoleParam"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseSysRole"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sysRole/save.soundmake": {
+      "post": {
+        "tags": [
+          "SysRoleController"
+        ],
+        "summary": "新增角色",
+        "description": "status(1正常，0冻结)",
+        "operationId": "saveRole",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoleParam"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseSysRole"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sysDept/update.soundmake": {
+      "post": {
+        "tags": [
+          "SysDeptController"
+        ],
+        "summary": "修改部门",
+        "operationId": "updateDept_2",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeptParam"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseSysDept"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sysDept/save.soundmake": {
+      "post": {
+        "tags": [
+          "SysDeptController"
+        ],
+        "summary": "新增部门",
+        "operationId": "saveDept",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeptParam"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseSysDept"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sysAclModule/update.soundmake": {
+      "post": {
+        "tags": [
+          "SysAclModuleController"
+        ],
+        "summary": "修改权限模块",
+        "operationId": "updateDept_3",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AclModuleParam"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseSysAclModule"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sysAclModule/save.soundmake": {
+      "post": {
+        "tags": [
+          "SysAclModuleController"
+        ],
+        "summary": "新增权限模块",
+        "operationId": "saveUser_1",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AclModuleParam"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseSysAclModule"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sysAcl/update.soundmake": {
+      "post": {
+        "tags": [
+          "SysAclController"
+        ],
+        "summary": "修改权限点",
+        "operationId": "update",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AclParam"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseSysAcl"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sysAcl/save.soundmake": {
+      "post": {
+        "tags": [
+          "SysAclController"
+        ],
+        "summary": "新增权限点",
+        "description": "类型(type)，1菜单2按钮3其他;status(1正常，0冻结)",
+        "operationId": "saveAcl",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AclParam"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseSysAcl"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ota/upload_file.soundmake": {
+      "post": {
+        "tags": [
+          "OtaController"
+        ],
+        "summary": "上传文件(废弃，web勿调)",
+        "operationId": "uploadFile",
+        "parameters": [
+          {
+            "name": "file",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          },
+          {
+            "name": "version",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "model",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "isForce",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseOta"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ota/needlogin/upload.soundmake": {
+      "post": {
+        "tags": [
+          "OtaController"
+        ],
+        "summary": "上传文件(给web端调用)",
+        "operationId": "uploadFile2",
+        "parameters": [
+          {
+            "name": "file",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          },
+          {
+            "name": "version",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "model",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "isForce",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseOta"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ota/needlogin/save.soundmake": {
+      "post": {
+        "tags": [
+          "OtaController"
+        ],
+        "summary": "新增和修改",
+        "operationId": "updateOta",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Ota"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseOta"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ota/needlogin/onlyUploadFile.soundmake": {
+      "post": {
+        "tags": [
+          "OtaController"
+        ],
+        "summary": "只是上传文件(给web端调用)",
+        "operationId": "onlyUploadFile2",
+        "parameters": [
+          {
+            "name": "file",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/launchPageFile/save.soundmake": {
+      "post": {
+        "tags": [
+          "LaunchPageFileController"
+        ],
+        "summary": "新增和修改",
+        "operationId": "saveLaunchPageFile",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LaunchPageFile"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseLaunchPageFile"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/launchPage/save.soundmake": {
+      "post": {
+        "tags": [
+          "LaunchPageController"
+        ],
+        "summary": "新增和修改",
+        "operationId": "saveLaunchPage",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LaunchPage"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseLaunchPage"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/customEq/updateCustomEq.soundmake": {
+      "post": {
+        "tags": [
+          "CustomEqController"
+        ],
+        "summary": "修改",
+        "operationId": "update_1",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomEqParam"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseCustomEq"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/customEq/saveCustomEq.soundmake": {
+      "post": {
+        "tags": [
+          "CustomEqController"
+        ],
+        "summary": "新增",
+        "operationId": "save",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomEqParam"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseCustomEq"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/anon/sysUser/save.soundmake": {
+      "post": {
+        "tags": [
+          "SysUserController"
+        ],
+        "summary": "新增App用户账号",
+        "operationId": "saveUserForApp",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AppUserParam"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseSysUser"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/anon/customeqUser/updateCustomeqUser.soundmake": {
+      "post": {
+        "tags": [
+          "CustomeqUserAnonController"
+        ],
+        "summary": "修改",
+        "operationId": "updateCustomeqUser",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomeqUserParam"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseCustomeqUser"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/anon/customeqUser/saveCustomeqUser.soundmake": {
+      "post": {
+        "tags": [
+          "CustomeqUserAnonController"
+        ],
+        "summary": "新增",
+        "operationId": "saveCustomeqUser",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomeqUserParam"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseCustomeqUser"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/SensitiveWord/saveSensitiveWord.soundmake": {
+      "post": {
+        "tags": [
+          "SensitiveWordController"
+        ],
+        "summary": "新增",
+        "operationId": "saveSensitiveWord",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SensitiveWordParam"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseSensitiveWord"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user/logout.soundmake": {
+      "get": {
+        "tags": [
+          "UserController"
+        ],
+        "summary": "系统用户登出",
+        "operationId": "logout",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user/login.soundmake": {
+      "get": {
+        "tags": [
+          "UserController"
+        ],
+        "summary": "系统用户登录",
+        "operationId": "login",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "query",
+            "description": "用户名",
+            "required": true
+          },
+          {
+            "name": "password",
+            "in": "query",
+            "description": "密码",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseObject"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sysUser/user_acltree.soundmake": {
+      "get": {
+        "tags": [
+          "SysUserController"
+        ],
+        "summary": "获取用户的权限树",
+        "operationId": "userAclTree",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "description": "用户主键",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseListAclModuleLevelDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sysUser/resetPassword.soundmake": {
+      "get": {
+        "tags": [
+          "SysUserController"
+        ],
+        "summary": "重置用户密码",
+        "operationId": "resetPassword",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sysUser/notneedlogin/get_userinfo.soundmake": {
+      "get": {
+        "tags": [
+          "SysUserController"
+        ],
+        "summary": "获取当前登录用户信息",
+        "operationId": "getLoginUserInfo",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseMapStringObject"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sysUser/modifyPassword.soundmake": {
+      "get": {
+        "tags": [
+          "SysUserController"
+        ],
+        "summary": "修改用户密码(不需要旧密码)",
+        "operationId": "modifyPassword",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "password",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sysUser/get_page_by_deptkeyid.soundmake": {
+      "get": {
+        "tags": [
+          "SysUserController"
+        ],
+        "summary": "按部门分页获取列表",
+        "operationId": "getUserList",
+        "parameters": [
+          {
+            "name": "pageNo",
+            "in": "query",
+            "description": "pageNo",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "大小",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          },
+          {
+            "name": "deptKeyid",
+            "in": "query",
+            "description": "部门主键",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponsePageResultSysUser"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sysRole/users.soundmake": {
+      "get": {
+        "tags": [
+          "SysRoleController"
+        ],
+        "summary": "获取角色的用户列表",
+        "operationId": "users",
+        "parameters": [
+          {
+            "name": "roleId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseMapStringListSysUser"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sysRole/tree.soundmake": {
+      "get": {
+        "tags": [
+          "SysRoleController"
+        ],
+        "summary": "获取角色的权限树",
+        "operationId": "tree",
+        "parameters": [
+          {
+            "name": "roleId",
+            "in": "query",
+            "description": "roleId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseListAclModuleLevelDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sysRole/list.soundmake": {
+      "get": {
+        "tags": [
+          "SysRoleController"
+        ],
+        "summary": "获取角色列表",
+        "operationId": "list",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseListSysRole"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sysRole/getRoleListByUserId.soundmake": {
+      "get": {
+        "tags": [
+          "SysRoleController"
+        ],
+        "summary": "获取用户的角色列表",
+        "operationId": "getRoleListByUserId",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseListSysRole"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sysRole/changeUsers.soundmake": {
+      "get": {
+        "tags": [
+          "SysRoleController"
+        ],
+        "summary": "保存角色的用户关系",
+        "operationId": "changeUsers",
+        "parameters": [
+          {
+            "name": "roleId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "userIds",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sysRole/changeAcls.soundmake": {
+      "get": {
+        "tags": [
+          "SysRoleController"
+        ],
+        "summary": "保存角色的权限树",
+        "operationId": "changeAcls",
+        "parameters": [
+          {
+            "name": "roleId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "aclIds",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sysLog/recover.soundmake": {
+      "get": {
+        "tags": [
+          "SysLogController"
+        ],
+        "summary": "回滚接口",
+        "operationId": "recover",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "log主键",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sysLog/get_page_by_Logmodulekeyid.soundmake": {
+      "get": {
+        "tags": [
+          "SysLogController"
+        ],
+        "summary": "分页获取列表",
+        "description": "status:当前是否复原过，0：没有，1：复原过",
+        "operationId": "getLogList",
+        "parameters": [
+          {
+            "name": "pageNo",
+            "in": "query",
+            "description": "pageNo",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "大小",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "description": "type",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponsePageResultSysLogWithBLOBs"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sysDept/tree.soundmake": {
+      "get": {
+        "tags": [
+          "SysDeptController"
+        ],
+        "summary": "获取部门树",
+        "operationId": "tree_1",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseListDeptLevelDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sysDept/delete.soundmake": {
+      "get": {
+        "tags": [
+          "SysDeptController"
+        ],
+        "summary": "删除部门",
+        "operationId": "delete",
+        "parameters": [
+          {
+            "name": "deptId",
+            "in": "query",
+            "description": "部门主键",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sysAclModule/tree.soundmake": {
+      "get": {
+        "tags": [
+          "SysAclModuleController"
+        ],
+        "summary": "获取权限模块树",
+        "operationId": "tree_2",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseListAclModuleLevelDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sysAclModule/delete.soundmake": {
+      "get": {
+        "tags": [
+          "SysAclModuleController"
+        ],
+        "summary": "删除权限模块",
+        "operationId": "delete_1",
+        "parameters": [
+          {
+            "name": "aclModuleKeyid",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sysAcl/get_page_by_aclmodulekeyid.soundmake": {
+      "get": {
+        "tags": [
+          "SysAclController"
+        ],
+        "summary": "按权限模块分页获取列表",
+        "operationId": "getAclList",
+        "parameters": [
+          {
+            "name": "pageNo",
+            "in": "query",
+            "description": "pageNo",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "大小",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          },
+          {
+            "name": "aclModuleKeyid",
+            "in": "query",
+            "description": "权限模块主键",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponsePageResultSysAcl"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sysAcl/delete.soundmake": {
+      "get": {
+        "tags": [
+          "SysAclController"
+        ],
+        "summary": "删除权限点",
+        "operationId": "delete_2",
+        "parameters": [
+          {
+            "name": "aclId",
+            "in": "query",
+            "description": "权限点主键",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sysAcl/acls.soundmake": {
+      "get": {
+        "tags": [
+          "SysAclController"
+        ],
+        "summary": "获取权限点分配的用户和角色数据",
+        "operationId": "acls",
+        "parameters": [
+          {
+            "name": "aclId",
+            "in": "query",
+            "description": "aclId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseMapStringObject"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ota/select_detail.soundmake": {
+      "get": {
+        "tags": [
+          "OtaController"
+        ],
+        "summary": "根据主键查询详情",
+        "operationId": "selectDetail",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseOta"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ota/ota_upgrade.soundmake": {
+      "get": {
+        "tags": [
+          "OtaController"
+        ],
+        "summary": "服务器升级信息连接地址",
+        "operationId": "selectDetailByModel",
+        "parameters": [
+          {
+            "name": "model",
+            "in": "query",
+            "description": "model",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseOta"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ota/needlogin/get_ota_list.soundmake": {
+      "get": {
+        "tags": [
+          "OtaController"
+        ],
+        "summary": "查询列表",
+        "operationId": "getOtaList",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "limit",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "description": "offset",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "isDeleted",
+            "in": "query",
+            "description": "isDeleted",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponsePageResultOta"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ota/needlogin/deleteOtaByFileName.soundmake": {
+      "get": {
+        "tags": [
+          "OtaController"
+        ],
+        "summary": "根据fileName删除文件，只删除文件不删数据库数据",
+        "operationId": "deleteOtaByFileName",
+        "parameters": [
+          {
+            "name": "fileName",
+            "in": "query",
+            "description": "fileName",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ota/needlogin/deleteOta.soundmake": {
+      "get": {
+        "tags": [
+          "OtaController"
+        ],
+        "summary": "根据主键删除ota",
+        "operationId": "deleteOta",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/launchPageFile/select_detail.soundmake": {
+      "get": {
+        "tags": [
+          "LaunchPageFileController"
+        ],
+        "summary": "根据主键查询详情",
+        "operationId": "selectByPrimaryKey",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseLaunchPageFile"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/launchPageFile/get_LaunchPageFile_list.soundmake": {
+      "get": {
+        "tags": [
+          "LaunchPageFileController"
+        ],
+        "summary": "按分页获取列表",
+        "operationId": "getUserList_1",
+        "parameters": [
+          {
+            "name": "pageNo",
+            "in": "query",
+            "description": "pageNo",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "大小",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          },
+          {
+            "name": "isDeleted",
+            "in": "query",
+            "description": "isDeleted",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "0"
+            }
+          },
+          {
+            "name": "launchPageKeyid",
+            "in": "query",
+            "description": "launchPageKeyid",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "orderWhat",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "orderHow",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pageValue",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponsePageResultLaunchPageFile"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/launchPage/select_detail.soundmake": {
+      "get": {
+        "tags": [
+          "LaunchPageController"
+        ],
+        "summary": "根据主键查询详情",
+        "operationId": "selectByPrimaryKey_1",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseLaunchPage"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/launchPage/get_LaunchPage_list.soundmake": {
+      "get": {
+        "tags": [
+          "LaunchPageController"
+        ],
+        "summary": "按分页获取列表",
+        "operationId": "getUserList_2",
+        "parameters": [
+          {
+            "name": "pageNo",
+            "in": "query",
+            "description": "pageNo",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "大小",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          },
+          {
+            "name": "isDeleted",
+            "in": "query",
+            "description": "isDeleted",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "0"
+            }
+          },
+          {
+            "name": "oemKeyid",
+            "in": "query",
+            "description": "oemKeyid",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "orderWhat",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "orderHow",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pageValue",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponsePageResultLaunchPage"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/customEq/select_detail.soundmake": {
+      "get": {
+        "tags": [
+          "CustomEqController"
+        ],
+        "summary": "根据主键查询详情",
+        "operationId": "selectByPrimaryKey_2",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseCustomEq"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/customEq/getCustomEqList.soundmake": {
+      "get": {
+        "tags": [
+          "CustomEqController"
+        ],
+        "summary": "按分页获取列表",
+        "operationId": "getList",
+        "parameters": [
+          {
+            "name": "pageNo",
+            "in": "query",
+            "description": "pageNo",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "大小",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          },
+          {
+            "name": "keyStr",
+            "in": "query",
+            "description": "模糊搜索的内容",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "author",
+            "in": "query",
+            "description": "作者",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "orderWhat",
+            "in": "query",
+            "description": "description/title/author/createTs",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "orderHow",
+            "in": "query",
+            "description": "descending/ascending",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponsePageResultCustomEqVO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/customEq/deleteCustomEq.soundmake": {
+      "get": {
+        "tags": [
+          "CustomEqController"
+        ],
+        "summary": "删除",
+        "operationId": "delete_3",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "主键",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/anon/sysUser/resetAppUserPassword.soundmake": {
+      "get": {
+        "tags": [
+          "SysUserController"
+        ],
+        "summary": "修改用户自己的密码",
+        "operationId": "resetAppUserPassword",
+        "parameters": [
+          {
+            "name": "email",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "password",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "code",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/anon/email/send_email_code_resetpassword.soundmake": {
+      "get": {
+        "tags": [
+          "email-controller"
+        ],
+        "summary": "重置密码邮箱验证码",
+        "operationId": "sendEmailCodeForResetpassword",
+        "parameters": [
+          {
+            "name": "email",
+            "in": "query",
+            "description": "email",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/anon/email/send_email_code_adduser.soundmake": {
+      "get": {
+        "tags": [
+          "email-controller"
+        ],
+        "summary": "新增用户邮箱验证码",
+        "operationId": "sendEmailCodeForAddUser",
+        "parameters": [
+          {
+            "name": "email",
+            "in": "query",
+            "description": "email",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/anon/customeqUser/select_by_id.soundmake": {
+      "get": {
+        "tags": [
+          "CustomeqUserAnonController"
+        ],
+        "summary": "根据主键查询详情",
+        "operationId": "selectByPrimaryKey_3",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseCustomeqUserVO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/anon/customeqUser/get_page_list.soundmake": {
+      "get": {
+        "tags": [
+          "CustomeqUserAnonController"
+        ],
+        "summary": "按分页获取列表",
+        "operationId": "getUserList_3",
+        "parameters": [
+          {
+            "name": "userKeyid",
+            "in": "query",
+            "description": "用户主键",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "customeqKeyid",
+            "in": "query",
+            "description": "eq主键",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pageNo",
+            "in": "query",
+            "description": "pageNo",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "isDeleted",
+            "in": "query",
+            "description": "isDeleted",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "0"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "大小",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          },
+          {
+            "name": "orderWhat",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "orderHow",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pageValue",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponsePageResultCustomeqUserVO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/anon/customeqUser/get_count.soundmake": {
+      "get": {
+        "tags": [
+          "CustomeqUserAnonController"
+        ],
+        "summary": "按条件获取Count",
+        "operationId": "getCount",
+        "parameters": [
+          {
+            "name": "userKeyid",
+            "in": "query",
+            "description": "用户主键",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "customeqKeyid",
+            "in": "query",
+            "description": "eq主键",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "isDeleted",
+            "in": "query",
+            "description": "isDeleted",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseInteger"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/anon/customeqUser/delete.soundmake": {
+      "get": {
+        "tags": [
+          "CustomeqUserAnonController"
+        ],
+        "summary": "删除",
+        "operationId": "delete_4",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "主键",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/SensitiveWord/select_by_id.soundmake": {
+      "get": {
+        "tags": [
+          "SensitiveWordController"
+        ],
+        "summary": "根据主键查询详情",
+        "operationId": "selectByPrimaryKey_4",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseSensitiveWord"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/SensitiveWord/get_page_list.soundmake": {
+      "get": {
+        "tags": [
+          "SensitiveWordController"
+        ],
+        "summary": "按分页获取列表",
+        "operationId": "getUserList_4",
+        "parameters": [
+          {
+            "name": "userKeyid",
+            "in": "query",
+            "description": "用户主键"
+          },
+          {
+            "name": "customeqKeyid",
+            "in": "query",
+            "description": "eq主键"
+          },
+          {
+            "name": "pageNo",
+            "in": "query",
+            "description": "pageNo",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "isDeleted",
+            "in": "query",
+            "description": "isDeleted"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "大小",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          },
+          {
+            "name": "orderWhat",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "orderHow",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pageValue",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponsePageResultSensitiveWord"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/SensitiveWord/delete.soundmake": {
+      "get": {
+        "tags": [
+          "SensitiveWordController"
+        ],
+        "summary": "删除",
+        "operationId": "delete_5",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "主键",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerResponseString"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "UserParam": {
+        "required": [
+          "deptId",
+          "mail",
+          "status",
+          "telephone",
+          "username"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          },
+          "telephone": {
+            "type": "string"
+          },
+          "mail": {
+            "type": "string"
+          },
+          "deptId": {
+            "type": "string"
+          },
+          "status": {
+            "maximum": 2,
+            "minimum": 0,
+            "type": "integer",
+            "format": "int32"
+          },
+          "remark": {
+            "type": "string"
+          }
+        }
+      },
+      "ServerResponseSysUser": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "msg": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/SysUser"
+          }
+        }
+      },
+      "SysUser": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          },
+          "telephone": {
+            "type": "string"
+          },
+          "mail": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "deptKeyid": {
+            "type": "string"
+          },
+          "remark": {
+            "type": "string"
+          },
+          "operator": {
+            "type": "string"
+          },
+          "operateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "operateIp": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "RoleParam": {
+        "required": [
+          "name",
+          "status"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "maximum": 2,
+            "minimum": 1,
+            "type": "integer",
+            "format": "int32"
+          },
+          "status": {
+            "maximum": 1,
+            "minimum": 0,
+            "type": "integer",
+            "format": "int32"
+          },
+          "remark": {
+            "type": "string"
+          }
+        }
+      },
+      "ServerResponseSysRole": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "msg": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/SysRole"
+          }
+        }
+      },
+      "SysRole": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "operator": {
+            "type": "string"
+          },
+          "operateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "operateIp": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "type": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "remark": {
+            "type": "string"
+          }
+        }
+      },
+      "DeptParam": {
+        "required": [
+          "name",
+          "seq"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "parentId": {
+            "type": "string"
+          },
+          "seq": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "remark": {
+            "type": "string"
+          }
+        }
+      },
+      "ServerResponseSysDept": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "msg": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/SysDept"
+          }
+        }
+      },
+      "SysDept": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "level": {
+            "type": "string"
+          },
+          "seq": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "remark": {
+            "type": "string"
+          },
+          "parentId": {
+            "type": "string"
+          },
+          "operator": {
+            "type": "string"
+          },
+          "operateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "operateIp": {
+            "type": "string"
+          },
+          "isDeleted": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "AclModuleParam": {
+        "required": [
+          "name",
+          "seq",
+          "status"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "parentId": {
+            "type": "string"
+          },
+          "seq": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "status": {
+            "maximum": 1,
+            "minimum": 0,
+            "type": "integer",
+            "format": "int32"
+          },
+          "remark": {
+            "type": "string"
+          }
+        }
+      },
+      "ServerResponseSysAclModule": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "msg": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/SysAclModule"
+          }
+        }
+      },
+      "SysAclModule": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "parentId": {
+            "type": "string"
+          },
+          "level": {
+            "type": "string"
+          },
+          "seq": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "remark": {
+            "type": "string"
+          },
+          "operator": {
+            "type": "string"
+          },
+          "operateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "operateIp": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "AclParam": {
+        "required": [
+          "aclModuleKeyid",
+          "name",
+          "seq",
+          "status",
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "aclModuleKeyid": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "type": {
+            "maximum": 3,
+            "minimum": 1,
+            "type": "integer",
+            "format": "int32"
+          },
+          "status": {
+            "maximum": 1,
+            "minimum": 0,
+            "type": "integer",
+            "format": "int32"
+          },
+          "seq": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "remark": {
+            "type": "string"
+          }
+        }
+      },
+      "ServerResponseSysAcl": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "msg": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/SysAcl"
+          }
+        }
+      },
+      "SysAcl": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          },
+          "aclModuleKeyid": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "seq": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "remark": {
+            "type": "string"
+          },
+          "operator": {
+            "type": "string"
+          },
+          "operateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "operateIp": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "type": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "Ota": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "model": {
+            "type": "string"
+          },
+          "size": {
+            "type": "string"
+          },
+          "md5": {
+            "type": "string"
+          },
+          "createTs": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updateTs": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isDeleted": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "createUserId": {
+            "type": "string"
+          },
+          "updateUserId": {
+            "type": "string"
+          },
+          "isForce": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "file1Name": {
+            "type": "string"
+          },
+          "file1Url": {
+            "type": "string"
+          },
+          "file2Name": {
+            "type": "string"
+          },
+          "file2Url": {
+            "type": "string"
+          },
+          "file3Name": {
+            "type": "string"
+          },
+          "file3Url": {
+            "type": "string"
+          },
+          "otaDesc": {
+            "type": "string"
+          }
+        }
+      },
+      "ServerResponseOta": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "msg": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/Ota"
+          }
+        }
+      },
+      "ServerResponseString": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "msg": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          }
+        }
+      },
+      "LaunchPageFile": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "isDeleted": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "updateTs": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createTs": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createUserId": {
+            "type": "string"
+          },
+          "updateUserId": {
+            "type": "string"
+          },
+          "launchPageKeyid": {
+            "type": "string"
+          },
+          "s3Key": {
+            "type": "string"
+          },
+          "weight": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ossUrl": {
+            "type": "string"
+          },
+          "jumpAddress": {
+            "type": "string"
+          },
+          "ossUrl1": {
+            "type": "string"
+          },
+          "ossUrl2": {
+            "type": "string"
+          }
+        }
+      },
+      "ServerResponseLaunchPageFile": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "msg": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/LaunchPageFile"
+          }
+        }
+      },
+      "LaunchPage": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "isDeleted": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "updateTs": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createTs": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createUserId": {
+            "type": "string"
+          },
+          "updateUserId": {
+            "type": "string"
+          },
+          "oemKeyid": {
+            "type": "string"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "launchPageVersion": {
+            "type": "string"
+          },
+          "isUse": {
+            "type": "string"
+          }
+        }
+      },
+      "ServerResponseLaunchPage": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "msg": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/LaunchPage"
+          }
+        }
+      },
+      "CustomEqParam": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "isDeleted": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "updateTs": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createTs": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createUserId": {
+            "type": "string"
+          },
+          "updateUserId": {
+            "type": "string"
+          },
+          "isUsed": {
+            "type": "string"
+          },
+          "isDownload": {
+            "type": "string"
+          },
+          "isZan": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "eqJsonString": {
+            "type": "string"
+          },
+          "masterGain": {
+            "type": "string"
+          },
+          "gainsStr": {
+            "type": "string"
+          },
+          "freqsStr": {
+            "type": "string"
+          },
+          "bwsStr": {
+            "type": "string"
+          },
+          "qsStr": {
+            "type": "string"
+          },
+          "typesStr": {
+            "type": "string"
+          },
+          "mac": {
+            "type": "string"
+          },
+          "earphones": {
+            "type": "string"
+          }
+        }
+      },
+      "CustomEq": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "isDeleted": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "updateTs": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createTs": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createUserId": {
+            "type": "string"
+          },
+          "updateUserId": {
+            "type": "string"
+          },
+          "isUsed": {
+            "type": "string"
+          },
+          "isDownload": {
+            "type": "string"
+          },
+          "isZan": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "earphones": {
+            "type": "string"
+          },
+          "eqJsonString": {
+            "type": "string"
+          },
+          "masterGain": {
+            "type": "string"
+          },
+          "gainsStr": {
+            "type": "string"
+          },
+          "freqsStr": {
+            "type": "string"
+          },
+          "bwsStr": {
+            "type": "string"
+          },
+          "qsStr": {
+            "type": "string"
+          },
+          "typesStr": {
+            "type": "string"
+          },
+          "mac": {
+            "type": "string"
+          }
+        }
+      },
+      "ServerResponseCustomEq": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "msg": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/CustomEq"
+          }
+        }
+      },
+      "AppUserParam": {
+        "required": [
+          "mail",
+          "username"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          },
+          "mail": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          }
+        }
+      },
+      "CustomeqUserParam": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "isDeleted": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "updateTs": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createTs": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createUserId": {
+            "type": "string"
+          },
+          "updateUserId": {
+            "type": "string"
+          },
+          "customeqKeyid": {
+            "type": "string"
+          },
+          "userKeyid": {
+            "type": "string"
+          }
+        }
+      },
+      "CustomeqUser": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "isDeleted": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "updateTs": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createTs": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createUserId": {
+            "type": "string"
+          },
+          "updateUserId": {
+            "type": "string"
+          },
+          "customeqKeyid": {
+            "type": "string"
+          },
+          "userKeyid": {
+            "type": "string"
+          }
+        }
+      },
+      "ServerResponseCustomeqUser": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "msg": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/CustomeqUser"
+          }
+        }
+      },
+      "SensitiveWordParam": {
+        "required": [
+          "sensitiveWord"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "sensitiveWord": {
+            "type": "string"
+          },
+          "sensitiveLevel": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "SensitiveWord": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "isDeleted": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "updateTs": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createTs": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createUserId": {
+            "type": "string"
+          },
+          "updateUserId": {
+            "type": "string"
+          },
+          "sensitiveWord": {
+            "type": "string"
+          },
+          "sensitiveLevel": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "ServerResponseSensitiveWord": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "msg": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/SensitiveWord"
+          }
+        }
+      },
+      "ServerResponseObject": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "msg": {
+            "type": "string"
+          },
+          "data": {
+            "type": "object"
+          }
+        }
+      },
+      "AclDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          },
+          "aclModuleKeyid": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "seq": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "remark": {
+            "type": "string"
+          },
+          "operator": {
+            "type": "string"
+          },
+          "operateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "operateIp": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "type": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "checked": {
+            "type": "boolean"
+          },
+          "hasAcl": {
+            "type": "boolean"
+          }
+        }
+      },
+      "AclModuleLevelDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "parentId": {
+            "type": "string"
+          },
+          "level": {
+            "type": "string"
+          },
+          "seq": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "remark": {
+            "type": "string"
+          },
+          "operator": {
+            "type": "string"
+          },
+          "operateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "operateIp": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "aclList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AclDto"
+            }
+          }
+        }
+      },
+      "ServerResponseListAclModuleLevelDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "msg": {
+            "type": "string"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AclModuleLevelDto"
+            }
+          }
+        }
+      },
+      "ServerResponseMapStringObject": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "msg": {
+            "type": "string"
+          },
+          "data": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "PageResultSysUser": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SysUser"
+            }
+          },
+          "records": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SysUser"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "ServerResponsePageResultSysUser": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "msg": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/PageResultSysUser"
+          }
+        }
+      },
+      "ServerResponseMapStringListSysUser": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "msg": {
+            "type": "string"
+          },
+          "data": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/SysUser"
+              }
+            }
+          }
+        }
+      },
+      "ServerResponseListSysRole": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "msg": {
+            "type": "string"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SysRole"
+            }
+          }
+        }
+      },
+      "PageResultSysLogWithBLOBs": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SysLogWithBLOBs"
+            }
+          },
+          "records": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SysLogWithBLOBs"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "ServerResponsePageResultSysLogWithBLOBs": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "msg": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/PageResultSysLogWithBLOBs"
+          }
+        }
+      },
+      "SysLogWithBLOBs": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "targetId": {
+            "type": "string"
+          },
+          "type": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "operator": {
+            "type": "string"
+          },
+          "operateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "operateIp": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "oldValue": {
+            "type": "string"
+          },
+          "newValue": {
+            "type": "string"
+          }
+        }
+      },
+      "DeptLevelDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "level": {
+            "type": "string"
+          },
+          "seq": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "remark": {
+            "type": "string"
+          },
+          "parentId": {
+            "type": "string"
+          },
+          "operator": {
+            "type": "string"
+          },
+          "operateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "operateIp": {
+            "type": "string"
+          },
+          "isDeleted": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "ServerResponseListDeptLevelDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "msg": {
+            "type": "string"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DeptLevelDto"
+            }
+          }
+        }
+      },
+      "PageResultSysAcl": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SysAcl"
+            }
+          },
+          "records": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SysAcl"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "ServerResponsePageResultSysAcl": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "msg": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/PageResultSysAcl"
+          }
+        }
+      },
+      "PageResultOta": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Ota"
+            }
+          },
+          "records": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Ota"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "ServerResponsePageResultOta": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "msg": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/PageResultOta"
+          }
+        }
+      },
+      "PageResultLaunchPageFile": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LaunchPageFile"
+            }
+          },
+          "records": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LaunchPageFile"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "ServerResponsePageResultLaunchPageFile": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "msg": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/PageResultLaunchPageFile"
+          }
+        }
+      },
+      "PageResultLaunchPage": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LaunchPage"
+            }
+          },
+          "records": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LaunchPage"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "ServerResponsePageResultLaunchPage": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "msg": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/PageResultLaunchPage"
+          }
+        }
+      },
+      "CustomEqVO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "isDeleted": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "updateTs": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createTs": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createUserId": {
+            "type": "string"
+          },
+          "updateUserId": {
+            "type": "string"
+          },
+          "isUsed": {
+            "type": "string"
+          },
+          "isDownload": {
+            "type": "string"
+          },
+          "isZan": {
+            "type": "string"
+          },
+          "zanCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "author": {
+            "type": "string"
+          },
+          "authorName": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "earphones": {
+            "type": "string"
+          },
+          "eqJsonString": {
+            "type": "string"
+          },
+          "masterGain": {
+            "type": "string"
+          },
+          "gainsStr": {
+            "type": "string"
+          },
+          "freqsStr": {
+            "type": "string"
+          },
+          "bwsStr": {
+            "type": "string"
+          },
+          "qsStr": {
+            "type": "string"
+          },
+          "typesStr": {
+            "type": "string"
+          },
+          "mac": {
+            "type": "string"
+          }
+        }
+      },
+      "PageResultCustomEqVO": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomEqVO"
+            }
+          },
+          "records": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomEqVO"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "ServerResponsePageResultCustomEqVO": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "msg": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/PageResultCustomEqVO"
+          }
+        }
+      },
+      "CustomeqUserVO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "isDeleted": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "updateTs": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createTs": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createUserId": {
+            "type": "string"
+          },
+          "updateUserId": {
+            "type": "string"
+          },
+          "customeqKeyid": {
+            "type": "string"
+          },
+          "customEq": {
+            "$ref": "#/components/schemas/CustomEq"
+          },
+          "userKeyid": {
+            "type": "string"
+          },
+          "user": {
+            "$ref": "#/components/schemas/SysUser"
+          }
+        }
+      },
+      "ServerResponseCustomeqUserVO": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "msg": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/CustomeqUserVO"
+          }
+        }
+      },
+      "PageResultCustomeqUserVO": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomeqUserVO"
+            }
+          },
+          "records": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomeqUserVO"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "ServerResponsePageResultCustomeqUserVO": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "msg": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/PageResultCustomeqUserVO"
+          }
+        }
+      },
+      "ServerResponseInteger": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "msg": {
+            "type": "string"
+          },
+          "data": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "PageResultSensitiveWord": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SensitiveWord"
+            }
+          },
+          "records": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SensitiveWord"
+            }
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "ServerResponsePageResultSensitiveWord": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "msg": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/PageResultSensitiveWord"
+          }
+        }
+      }
+    }
+  }
+}

@@ -4,7 +4,7 @@ const modelValue = defineModel()
 
 <template>
   <div flex="1" border="1px solid">
-    <textarea v-model="modelValue" class="w-100% h-400px p-4" />
+    <textarea v-model="modelValue" class="w-100% h-100% p-4" />
   </div>
 </template>
 
