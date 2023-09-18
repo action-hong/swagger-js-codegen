@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { processOpenAPI } from '@clscg/core'
+import { processOpenAPI } from 'clscg-core'
 
 // @ts-expect-error missing types
 import { Pane, Splitpanes } from 'splitpanes'

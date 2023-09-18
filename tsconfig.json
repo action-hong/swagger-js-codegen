@@ -11,7 +11,7 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "paths": {
-      "@clscg/core": ["./packages/core/src/index.ts"]
+      "clscg-core": ["./packages/core/src/index.ts"]
     }
   },
   "exclude": [
