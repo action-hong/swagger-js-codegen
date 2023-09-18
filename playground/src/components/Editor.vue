@@ -14,6 +14,10 @@ const props = defineProps({
     type: Boolean,
     default: true,
   },
+  title: {
+    type: String,
+    default: '',
+  },
 })
 const modelValue = defineModel<string>()
 const monacoEl = ref()
@@ -47,14 +51,28 @@ onMounted(() => {
     editor = null as any
   }
 })
+
+const { copy } = useClipboard({
+  source: modelValue.value,
+})
 </script>
 
 <template>
-  <div ref="monacoEl" />
+  <div>
+    <div class="h-60px flex items-center font-bold px-2">
+      <h2 class="text-lg">
+        {{ title }}
+      </h2>
+      <div class="ml-auto">
+        <div class="i-carbon-copy cursor-pointer opacity-75 hover:opacity-100" title="复制代码" @click="copy()" />
+      </div>
+    </div>
+    <div ref="monacoEl" class="kk-editor" />
+  </div>
 </template>
 
 <style scoped>
-div {
-  height: 100vh;
+div.kk-editor {
+  height: calc(100vh - 60px);
 }
 </style>

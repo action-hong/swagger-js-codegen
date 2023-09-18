@@ -28,12 +28,16 @@ const result = computed(() => {
   >
     <Splitpanes class="default-theme h-100vh">
       <Pane>
-        <Editor v-model="code" :control="false" />
+        <Editor
+          v-model="code" :control="false"
+          title="swagger doc"
+        />
       </Pane>
       <Pane>
         <Editor
           :model-value="result.code"
           language="javascript"
+          title="api代码"
           readonly
         />
       </Pane>
@@ -41,6 +45,7 @@ const result = computed(() => {
         <Editor
           :model-value="result.dts"
           language="typescript"
+          title="ts类型文件"
           readonly
         />
       </Pane>
