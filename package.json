@@ -3,9 +3,9 @@
   "type": "module",
   "version": "0.0.1",
   "private": "true",
-  "packageManager": "pnpm@8.6.10",
+  "packageManager": "pnpm@8.6.12",
   "scripts": {
-    "build": "rimraf packages/*/dist && pnpm -r --filter=./packages/* run build",
+    "build": "rimraf --glob packages/*/dist && pnpm -r --filter=./packages/* run build",
     "dev": "nr stub",
     "lint": "eslint .",
     "lint:fix": "nr lint --fix",
@@ -13,7 +13,9 @@
     "release": "bumpp -r",
     "stub": "pnpm -r --filter=./packages/* --parallel run stub",
     "test": "vitest",
-    "typecheck": "tsc --noEmit "
+    "typecheck": "tsc --noEmit ",
+    "play": "npm -C playground run dev",
+    "deploy": "nr build && npm -C run build"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.8",
