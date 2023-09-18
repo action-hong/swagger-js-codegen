@@ -15,7 +15,7 @@
     "test": "vitest",
     "typecheck": "tsc --noEmit ",
     "play": "npm -C playground run dev",
-    "deploy": "nr build && npm -C run build"
+    "deploy": "nr build && npm -C playground run build"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.8",
