@@ -1,12 +1,13 @@
 <script lang="ts" setup>
 import { processOpenAPI } from '@clscg/core'
-import { getHighlighter } from 'shikiji'
-import raw from './constants/demo.json?raw'
 
-let shiki: any
+// @ts-expect-error missing types
+import { Pane, Splitpanes } from 'splitpanes'
+import raw from './constants/demo.json?raw'
+import 'splitpanes/dist/splitpanes.css'
+
 const code = ref(raw)
 
-const jsHtml = ref('')
 const result = computed(() => {
   try {
     return processOpenAPI(JSON.parse(code.value))
@@ -14,35 +15,38 @@ const result = computed(() => {
   catch (error) {
     return {
       code: '',
+      dts: '',
     }
-  }
-})
-
-getHighlighter({
-  themes: ['nord'],
-  langs: ['javascript'],
-}).then((highlighter) => {
-  shiki = highlighter
-  jsHtml.value = shiki.codeToHtml(result.value.code, { lang: 'javascript', theme: 'nord' })
-})
-
-watch(() => result.value.code, (code) => {
-  if (shiki) {
-    jsHtml.value = shiki.codeToHtml(code, { lang: 'javascript', theme: 'nord' })
   }
 })
 </script>
 
 <template>
   <main
-    flex="~" font-sans p="x-4 y-10" gray-700 dark:gray-200
+    flex="~" font-sans gray-700 dark:gray-200
     gap="4"
   >
-    <Editor v-model="code" />
-    <div flex="1" class="h-100%" v-html="jsHtml" />
+    <Splitpanes class="default-theme h-100vh">
+      <Pane>
+        <Editor v-model="code" :control="false" />
+      </Pane>
+      <Pane>
+        <Editor
+          :model-value="result.code"
+          language="javascript"
+          readonly
+        />
+      </Pane>
+      <Pane>
+        <Editor
+          :model-value="result.dts"
+          language="typescript"
+          readonly
+        />
+      </Pane>
+    </Splitpanes>
   </main>
 </template>
 
 <style lang="scss" scoped>
-
 </style>
