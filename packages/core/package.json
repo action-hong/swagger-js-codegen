@@ -1,5 +1,5 @@
 {
-  "name": "@clscg/core",
+  "name": "clscg-core",
   "version": "0.0.3",
   "description": "corelink swagger js codegen",
   "author": "kkopite <kkopitehong@foxmail.com>",
