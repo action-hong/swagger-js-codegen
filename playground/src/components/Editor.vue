@@ -23,9 +23,9 @@ const modelValue = defineModel<string>()
 const monacoEl = ref()
 let editor: monaco.editor.IStandaloneCodeEditor
 
-watchEffect(() => {
-  if (modelValue.value && editor && props.control) {
-    editor.setValue(modelValue.value)
+watch(() => modelValue.value, () => {
+  if (editor && props.control) {
+    editor.setValue(modelValue.value || '')
   }
 })
 
@@ -55,6 +55,13 @@ onMounted(() => {
 const { copy } = useClipboard({
   source: modelValue.value,
 })
+
+function clear() {
+  if (editor) {
+    editor.setValue('')
+    modelValue.value = ''
+  }
+}
 </script>
 
 <template>
@@ -63,7 +70,8 @@ const { copy } = useClipboard({
       <h2 class="text-lg">
         {{ title }}
       </h2>
-      <div class="ml-auto">
+      <div class="ml-auto flex items-center gap-2">
+        <div v-if="!readonly" class="i-carbon-trash-can cursor-pointer opacity-75 hover:opacity-100" title="删除" @click="clear" />
         <div class="i-carbon-copy cursor-pointer opacity-75 hover:opacity-100" title="复制代码" @click="copy()" />
       </div>
     </div>
