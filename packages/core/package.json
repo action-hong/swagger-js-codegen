@@ -1,6 +1,6 @@
 {
   "name": "clscg-core",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "corelink swagger js codegen",
   "author": "kkopite <kkopitehong@foxmail.com>",
   "license": "MIT",
