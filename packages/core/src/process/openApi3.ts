@@ -47,7 +47,7 @@ export const ${getAPIName(path)} = (${data}, config = {}) => {
 
 function getAPIName(path: string) {
   // 去掉后缀名和斜杠, 驼峰法合起来
-  return path.replace(/\.json/, '')
+  return path.replace(/\..*$/, '')
     .slice(1)
     .replace(/[\/_](\w)/g, (_, $1) => $1.toUpperCase())
 }
