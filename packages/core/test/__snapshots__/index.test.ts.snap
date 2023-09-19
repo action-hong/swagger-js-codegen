@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`codegen > should return code 1`] = `
+exports[`codegen > should return code and dts 1`] = `
 "
 /**
  * 修改系统用户
@@ -2084,7 +2084,7 @@ export const anonAppUserAddNewUser = (params, config = {}) => {
 "
 `;
 
-exports[`codegen > should return code 2`] = `
+exports[`codegen > should return code and dts 2`] = `
 "
 interface UserParam {
   id?: string,
