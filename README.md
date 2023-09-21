@@ -1,6 +1,6 @@
 # @kkopite/swagger-js-codegen
 
-[![NPM version](https://img.shields.io/npm/v/@kkopite/swagger-js-codegen?color=a1b858&label=)](https://www.npmjs.com/package/@kkopite/swagger-js-codegen)
+[![NPM version](https://img.shields.io/npm/v/clscg-core?color=a1b858&label=)](https://www.npmjs.com/package/clscg-core)
 
 ## License
 
