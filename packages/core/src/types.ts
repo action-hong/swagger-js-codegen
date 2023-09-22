@@ -7,8 +7,22 @@ export interface ProcessOpenAPIResult {
    * ts格式代码
    */
   dts: string
+
+}
+
+export interface ProcessApiInfo {
+  method: string
+  requestType: string
+  returnType: string
+  summary: string
+  url: string
+  functionName: string
 }
 
 export interface ProcessOpenAPIOptions {
-  // todo:
+
+  /**
+   * 自行渲染代码
+   */
+  renderCode?: (info: ProcessApiInfo) => string
 }

@@ -1,9 +1,9 @@
 import type { OpenAPIV3 } from 'openapi-types'
-import type { ProcessOpenAPIOptions, ProcessOpenAPIResult } from '../types'
+import type { ProcessApiInfo, ProcessOpenAPIOptions, ProcessOpenAPIResult } from '../types'
 
 export function processOpenAPI3(doc: OpenAPIV3.Document, _options: ProcessOpenAPIOptions = {}): ProcessOpenAPIResult {
   return {
-    code: generateApiCode(doc),
+    code: generateApiCode(doc, _options),
     dts: generateTSTypeCode(doc),
   }
 }
@@ -12,7 +12,7 @@ interface Parameter {
   [key: string]: any
 }
 
-function generateApiCode(doc: OpenAPIV3.Document) {
+function generateApiCode(doc: OpenAPIV3.Document, option: ProcessOpenAPIOptions) {
   const result
     = Object.entries(doc.paths)
       .flatMap(([path, m]) => {
@@ -22,6 +22,17 @@ function generateApiCode(doc: OpenAPIV3.Document) {
         return Object.entries(m)
           .map(([method, obj]) => {
             const t = obj as any
+            const info: ProcessApiInfo = {
+              summary: t.summary,
+              requestType: getRequestParmas(method, t),
+              returnType: getSchemaType(t.responses[200]?.content?.['*/*']?.schema),
+              method,
+              url: path,
+              functionName: getAPIName(path),
+            }
+            if (option.renderCode) {
+              return option.renderCode(info)
+            }
             const data = method === 'get' ? 'params' : 'data'
             return `
 /**

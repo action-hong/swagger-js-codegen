@@ -3,14 +3,22 @@ import { processOpenAPI } from 'clscg-core'
 
 // @ts-expect-error missing types
 import { Pane, Splitpanes } from 'splitpanes'
+import Mustache from 'mustache'
 import raw from './constants/demo.json?raw'
 import 'splitpanes/dist/splitpanes.css'
+import { templates } from './templates'
 
 const code = ref(raw)
 
+const templateKey = ref(0)
+
 const result = computed(() => {
   try {
-    return processOpenAPI(JSON.parse(code.value))
+    return processOpenAPI(JSON.parse(code.value), {
+      renderCode: (info) => {
+        return Mustache.render(templates[templateKey.value].template, info)
+      },
+    })
   }
   catch (error) {
     return {
@@ -39,7 +47,20 @@ const result = computed(() => {
           language="javascript"
           title="api代码"
           readonly
-        />
+        >
+          <select
+            v-model="templateKey"
+            class="mx-2"
+          >
+            <option
+              v-for="(template, index) in templates"
+              :key="index"
+              :value="index"
+            >
+              {{ template.name }}
+            </option>
+          </select>
+        </Editor>
       </Pane>
       <Pane>
         <Editor

@@ -7,6 +7,13 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@types/mustache':
+        specifier: ^4.2.2
+        version: 4.2.2
+      mustache:
+        specifier: ^4.2.0
+        version: 4.2.0
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^0.39.8
@@ -17,9 +24,6 @@ importers:
       '@antfu/utils':
         specifier: ^0.7.5
         version: 0.7.5
-      'clscg-core':
-        specifier: workspace:*
-        version: link:packages/core
       '@iconify-json/carbon':
         specifier: ^1.1.21
         version: 1.1.21
@@ -47,6 +51,9 @@ importers:
       bumpp:
         specifier: ^9.1.1
         version: 9.1.1
+      clscg-core:
+        specifier: workspace:*
+        version: link:packages/core
       eslint:
         specifier: ^8.45.0
         version: 8.45.0
@@ -1395,6 +1402,10 @@ packages:
   /@types/ms@0.7.31:
     resolution: {integrity: sha512-iiUgKzV9AuaEkZqkOLDIvlQiL6ltuZd9tGcW3gwpnX8JbuiuhFlEGmmFXEXkN50Cvq7Os88IY2v0dkDqXYWVgA==}
     dev: true
+
+  /@types/mustache@4.2.2:
+    resolution: {integrity: sha512-MUSpfpW0yZbTgjekDbH0shMYBUD+X/uJJJMm9LXN1d5yjl5lCY1vN/eWKD6D1tOtjA6206K0zcIPnUaFMurdNA==}
+    dev: false
 
   /@types/node@20.4.5:
     resolution: {integrity: sha512-rt40Nk13II9JwQBdeYqmbn2Q6IVTA5uPhvSO+JVqdXw/6/4glI6oR9ezty/A9Hg5u7JH4OmYmuQ+XvjKm0Datg==}
@@ -5257,6 +5268,11 @@ packages:
   /muggle-string@0.3.1:
     resolution: {integrity: sha512-ckmWDJjphvd/FvZawgygcUeQCxzvohjFO5RxTjj4eq8kw359gFF3E1brjfI+viLMxss5JrHTDRHZvu2/tuy0Qg==}
     dev: true
+
+  /mustache@4.2.0:
+    resolution: {integrity: sha512-71ippSywq5Yb7/tVYyGbkBggbU8H3u5Rz56fH60jGFgr8uHwxs+aSKeqmluIVzM0m0kB7xQjKS6qPfd0b2ZoqQ==}
+    hasBin: true
+    dev: false
 
   /nanoid@3.3.6:
     resolution: {integrity: sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==}

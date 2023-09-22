@@ -17,6 +17,10 @@
     "play": "npm -C playground run dev",
     "deploy": "nr build && npm -C playground run build"
   },
+  "dependencies": {
+    "@types/mustache": "^4.2.2",
+    "mustache": "^4.2.0"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.8",
     "@antfu/ni": "^0.21.5",

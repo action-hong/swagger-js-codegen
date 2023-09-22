@@ -1,0 +1,14 @@
+/**
+ * {{ summary }}
+ * @param { {{ requestType }} } data
+ * @param {any} config
+ * @returns {Promise<{{ returnType }}>}
+ */
+export const {{ functionName }} = (data, config = {}) => {
+  return wx.request({
+    method: '{{ method }}',
+    url: '{{{ url }}}',
+    data,
+    ...config
+  })
+}
