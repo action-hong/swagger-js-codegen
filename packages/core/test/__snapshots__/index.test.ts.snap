@@ -15,8 +15,8 @@ export const sysUserUpdate = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 新增系统用户账号
@@ -31,8 +31,8 @@ export const sysUserSave = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 修改角色
@@ -47,8 +47,8 @@ export const sysRoleUpdate = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 新增角色
@@ -63,8 +63,8 @@ export const sysRoleSave = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 修改部门
@@ -79,8 +79,8 @@ export const sysDeptUpdate = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 新增部门
@@ -95,8 +95,8 @@ export const sysDeptSave = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 修改权限模块
@@ -111,8 +111,8 @@ export const sysAclModuleUpdate = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 新增权限模块
@@ -127,8 +127,8 @@ export const sysAclModuleSave = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 修改权限点
@@ -143,8 +143,8 @@ export const sysAclUpdate = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 新增权限点
@@ -159,8 +159,8 @@ export const sysAclSave = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 新增、修改及删除的操作（逻辑删除）
@@ -175,8 +175,8 @@ export const otaSave = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 新增、修改及删除的操作（逻辑删除）
@@ -191,8 +191,8 @@ export const launchPageFileSave = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 新增、修改及删除的操作（逻辑删除）
@@ -207,8 +207,8 @@ export const launchPageSave = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 修改
@@ -223,8 +223,8 @@ export const deviceTypeUpdateDeviceType = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 新增
@@ -239,8 +239,8 @@ export const deviceTypeSaveDeviceType = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 修改
@@ -255,8 +255,8 @@ export const deviceUpdateDevice = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 新增
@@ -271,8 +271,8 @@ export const deviceSaveDevice = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 修改
@@ -287,8 +287,8 @@ export const appUserDeviceUpdateAppUserDevice = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 新增设备和关系
@@ -303,8 +303,8 @@ export const appUserDeviceSaveAppUserDeviceAndDevice = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 新增
@@ -319,8 +319,8 @@ export const appUserDeviceSaveAppUserDevice = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 修改
@@ -335,8 +335,8 @@ export const appUserUpdateAppUser = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 新增
@@ -351,8 +351,8 @@ export const appUserSaveAppUser = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 新增
@@ -367,8 +367,8 @@ export const anonUploadUploadFile = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 修改
@@ -383,8 +383,8 @@ export const anonTranslationUpdate = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 新增
@@ -399,8 +399,8 @@ export const anonTranslationSaveTranslation = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 修改
@@ -415,8 +415,8 @@ export const anonSuggestionUpdateSuggestion = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 新增
@@ -431,8 +431,8 @@ export const anonSuggestionSaveSuggestion = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 新增、修改及删除的操作（逻辑删除）
@@ -447,8 +447,8 @@ export const anonPushstringSave = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 新增、修改及删除的操作（逻辑删除）
@@ -463,8 +463,8 @@ export const anonOtaSave = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 修改
@@ -479,8 +479,8 @@ export const anonEqTestUpdateEqTest = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 新增
@@ -495,8 +495,8 @@ export const anonEqTestSaveEqTest = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 修改
@@ -511,8 +511,8 @@ export const anonDiscoverUpdateDiscover = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 新增
@@ -527,8 +527,8 @@ export const anonDiscoverSaveDiscover = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 修改
@@ -543,8 +543,8 @@ export const anonDeviceTypeUpdateDeviceType = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 新增
@@ -559,8 +559,8 @@ export const anonDeviceTypeSaveDeviceType = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 新增
@@ -575,8 +575,8 @@ export const anonDeviceMessageSaveDeviceMessage = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 修改
@@ -591,8 +591,8 @@ export const anonDeviceUpdateDevice = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 新增
@@ -607,8 +607,8 @@ export const anonDeviceSaveDevice = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 修改
@@ -623,8 +623,8 @@ export const anonAppUserDeviceUpdateAppUserDevice = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 新增设备和关系
@@ -639,8 +639,8 @@ export const anonAppUserDeviceSaveAppUserDeviceAndDevice = (data, config = {}) =
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 新增
@@ -655,8 +655,8 @@ export const anonAppUserDeviceSaveAppUserDevice = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 修改
@@ -671,8 +671,8 @@ export const anonAppUserUpdateAppUser = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 新增
@@ -687,8 +687,8 @@ export const anonAppUserSaveAppUser = (data, config = {}) => {
     data,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 系统用户登出
@@ -703,8 +703,8 @@ export const userLogout = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 系统用户登录
@@ -719,8 +719,8 @@ export const userLogin = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 获取用户的权限树
@@ -735,8 +735,8 @@ export const sysUserUserAcltree = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 重置用户密码
@@ -751,8 +751,8 @@ export const sysUserResetPassword = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 获取当前登录用户信息
@@ -767,8 +767,8 @@ export const sysUserNotneedloginGetUserinfo = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 修改用户密码(不需要旧密码)
@@ -783,8 +783,8 @@ export const sysUserModifyPassword = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 按部门分页获取列表
@@ -799,8 +799,8 @@ export const sysUserGetPageByDeptkeyid = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 获取角色的用户列表
@@ -815,8 +815,8 @@ export const sysRoleUsers = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 获取角色的权限树
@@ -831,8 +831,8 @@ export const sysRoleTree = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 获取角色列表
@@ -847,8 +847,8 @@ export const sysRoleList = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 获取用户的角色列表
@@ -863,8 +863,8 @@ export const sysRoleGetRoleListByUserId = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 保存角色的用户关系
@@ -879,8 +879,8 @@ export const sysRoleChangeUsers = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 保存角色的权限树
@@ -895,8 +895,8 @@ export const sysRoleChangeAcls = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 回滚接口
@@ -911,8 +911,8 @@ export const sysLogRecover = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 分页获取列表
@@ -927,8 +927,8 @@ export const sysLogGetPageByLogmodulekeyid = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 获取部门树
@@ -943,8 +943,8 @@ export const sysDeptTree = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 删除部门
@@ -959,8 +959,8 @@ export const sysDeptDelete = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 获取权限模块树
@@ -975,8 +975,8 @@ export const sysAclModuleTree = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 删除权限模块
@@ -991,8 +991,8 @@ export const sysAclModuleDelete = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 按权限模块分页获取列表
@@ -1007,8 +1007,8 @@ export const sysAclGetPageByAclmodulekeyid = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 删除权限点
@@ -1023,8 +1023,8 @@ export const sysAclDelete = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 获取权限点分配的用户和角色数据
@@ -1039,8 +1039,8 @@ export const sysAclAcls = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 根据主键查询详情
@@ -1055,8 +1055,8 @@ export const otaSelectDetail = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 根据硬件版本号查询详情
@@ -1071,8 +1071,8 @@ export const otaSelectByHv = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 按分页获取列表
@@ -1087,8 +1087,8 @@ export const otaGetPageList = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 根据主键查询详情
@@ -1103,8 +1103,8 @@ export const launchPageFileSelectDetail = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 查询LaunchPageFile列表
@@ -1119,8 +1119,8 @@ export const launchPageFileGetLaunchPageFileList = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 根据主键查询详情
@@ -1135,8 +1135,8 @@ export const launchPageSelectDetail = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 查询LaunchPage列表
@@ -1151,8 +1151,8 @@ export const launchPageGetLaunchPageList = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 根据主键查询详情
@@ -1167,8 +1167,8 @@ export const deviceTypeSelectById = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 按分页获取列表
@@ -1183,8 +1183,8 @@ export const deviceTypeGetPageList = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 根据主键查询详情
@@ -1199,8 +1199,8 @@ export const deviceSelectById = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 按分页获取列表
@@ -1215,8 +1215,8 @@ export const deviceGetPageList = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 按分页获取列表
@@ -1231,8 +1231,8 @@ export const appUserDeviceGetPageList = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 修改密码
@@ -1247,8 +1247,8 @@ export const appUserUpdatePassword = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 登出
@@ -1263,8 +1263,8 @@ export const appUserLoginOut = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 邮箱和密码登录
@@ -1279,8 +1279,8 @@ export const appUserLoginByPasswordAndEmail = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 按分页获取列表
@@ -1295,8 +1295,8 @@ export const appUserGetPageList = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 获取列表
@@ -1311,8 +1311,8 @@ export const appUserGetAppUserList = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 删除
@@ -1327,8 +1327,8 @@ export const appUserDeleteAppUser = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 按分页获取列表
@@ -1343,8 +1343,8 @@ export const anonTranslationGetPageList = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 根据主键查询详情
@@ -1359,8 +1359,8 @@ export const anonSuggestionSelectById = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 按分页获取列表
@@ -1375,8 +1375,8 @@ export const anonSuggestionGetPageList = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 根据主键查询详情
@@ -1391,8 +1391,8 @@ export const anonPushstringSelectDetail = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 查询PushString列表
@@ -1407,8 +1407,8 @@ export const anonPushstringGetPushstringListCheckread = (params, config = {}) =>
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 查询PushString列表(查不出未到推送时间的)
@@ -1423,8 +1423,8 @@ export const anonPushstringGetPushstringListBeforenow = (params, config = {}) =>
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 查询PushString列表
@@ -1439,8 +1439,8 @@ export const anonPushstringGetPushstringList = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * getReadCountAndTotalCount
@@ -1455,8 +1455,8 @@ export const anonPushstringGetReadCountAndTotalCount = (params, config = {}) => 
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * allToRead
@@ -1471,8 +1471,8 @@ export const anonPushstringAllToRead = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 根据主键查询详情
@@ -1487,8 +1487,8 @@ export const anonOtaSelectDetail = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 根据硬件版本号查询详情
@@ -1503,8 +1503,8 @@ export const anonOtaSelectByHv = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 按分页获取列表
@@ -1519,8 +1519,8 @@ export const anonOtaGetPageList = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 根据主键查询详情
@@ -1535,8 +1535,8 @@ export const anonLaunchPageFileSelectDetail = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 查询LaunchPageFile列表
@@ -1551,8 +1551,8 @@ export const anonLaunchPageFileGetLaunchPageFileList = (params, config = {}) => 
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 根据主键查询详情
@@ -1567,8 +1567,8 @@ export const anonLaunchPageSelectDetail = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 查询LaunchPage列表
@@ -1583,8 +1583,8 @@ export const anonLaunchPageGetLaunchPageList = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 根据主键查询详情
@@ -1599,8 +1599,8 @@ export const anonEqTestSelectById = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 按分页获取列表
@@ -1615,8 +1615,8 @@ export const anonEqTestGetPageList = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 获取邮箱验证码(找回密码)
@@ -1631,8 +1631,8 @@ export const anonEmailSendEmailCodeUpdatepassword = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 获取邮箱验证码(绑定变更)
@@ -1647,8 +1647,8 @@ export const anonEmailSendEmailCodeUpdatebind = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 获取邮箱验证码(注册)
@@ -1663,8 +1663,8 @@ export const anonEmailSendEmailCodeRegister = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 获取邮箱验证码(登陆)
@@ -1679,8 +1679,8 @@ export const anonEmailSendEmailCodeLogin = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 获取邮箱验证码(同意绑定变更)
@@ -1695,8 +1695,8 @@ export const anonEmailSendEmailCodeAgreebind = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 根据主键查询详情
@@ -1711,8 +1711,8 @@ export const anonDiscoverSelectById = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 按分页获取列表
@@ -1727,8 +1727,8 @@ export const anonDiscoverGetPageList = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 根据主键查询详情
@@ -1743,8 +1743,8 @@ export const anonDeviceTypeSelectById = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 按分页获取列表
@@ -1759,8 +1759,8 @@ export const anonDeviceTypeGetPageList = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 按分页获取列表
@@ -1775,8 +1775,8 @@ export const anonDeviceMessageGetPageList = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 根据mac更新经纬度
@@ -1791,8 +1791,8 @@ export const anonDeviceUpdateLatLngByMAC = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 根据mac查询详情
@@ -1807,8 +1807,8 @@ export const anonDeviceSelectByMac = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 根据主键查询详情
@@ -1823,8 +1823,8 @@ export const anonDeviceSelectById = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 按分页获取列表
@@ -1839,8 +1839,8 @@ export const anonDeviceGetPageList = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 按分页获取列表
@@ -1855,8 +1855,8 @@ export const anonAppUserDeviceGetPageList = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 按主键删除
@@ -1871,8 +1871,8 @@ export const anonAppUserDeviceDelete = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 修改密码
@@ -1887,8 +1887,8 @@ export const anonAppUserUpdatePassword = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 获取统计数据（区域）
@@ -1903,8 +1903,8 @@ export const anonAppUserSelectStatisticsCountry = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 发送重置密码链接
@@ -1919,8 +1919,8 @@ export const anonAppUserReSetPasswordDoSendEmail = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 重置密码
@@ -1935,8 +1935,8 @@ export const anonAppUserReSetPassword = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 重新发送激活链接
@@ -1951,8 +1951,8 @@ export const anonAppUserReSendEmailURL = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 登出
@@ -1967,8 +1967,8 @@ export const anonAppUserLoginOut = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 邮箱和密码登录
@@ -1983,8 +1983,8 @@ export const anonAppUserLoginByPasswordAndEmail = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 按分页获取列表
@@ -1999,8 +1999,8 @@ export const anonAppUserGetAppUserList = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 激活用户(邮件里面用)
@@ -2015,8 +2015,8 @@ export const anonAppUserDookuser = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 删除
@@ -2031,8 +2031,8 @@ export const anonAppUserDeleteAppUser = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 校验登录
@@ -2047,8 +2047,8 @@ export const anonAppUserCheckLogin = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 邮箱校验
@@ -2063,8 +2063,8 @@ export const anonAppUserCheckEmail = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
+
 
 /**
  * 注册新用户
@@ -2079,8 +2079,7 @@ export const anonAppUserAddNewUser = (params, config = {}) => {
     params,
     ...config
   })
-}       
-          
+}
 "
 `;
 
