@@ -6,7 +6,7 @@ import { Pane, Splitpanes } from 'splitpanes'
 import Mustache from 'mustache'
 import raw from './constants/demo.json?raw'
 import 'splitpanes/dist/splitpanes.css'
-import { templates } from './templates'
+import { allTemlates } from '~/data'
 
 const code = ref(raw)
 
@@ -16,7 +16,11 @@ const result = computed(() => {
   try {
     return processOpenAPI(JSON.parse(code.value), {
       renderCode: (info) => {
-        return Mustache.render(templates[templateKey.value].template, info)
+        return Mustache.render(allTemlates.value[templateKey.value].template, {
+          ...info,
+          isPost: info.method.toLowerCase() === 'post',
+          isGet: info.method.toLowerCase() === 'get',
+        })
       },
     })
   }
@@ -36,10 +40,19 @@ const result = computed(() => {
   >
     <Splitpanes class="default-theme h-100vh">
       <Pane>
-        <Editor
-          v-model="code" :control="false"
-          title="swagger doc"
-        />
+        <Splitpanes
+          horizontal
+        >
+          <Pane>
+            <Editor
+              v-model="code" :control="false"
+              title="swagger doc"
+            />
+          </Pane>
+          <Pane>
+            <CustomTemplate />
+          </Pane>
+        </Splitpanes>
       </Pane>
       <Pane>
         <Editor
@@ -53,7 +66,7 @@ const result = computed(() => {
             class="mx-2"
           >
             <option
-              v-for="(template, index) in templates"
+              v-for="(template, index) in allTemlates"
               :key="index"
               :value="index"
             >

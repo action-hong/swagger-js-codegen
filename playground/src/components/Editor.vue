@@ -24,7 +24,7 @@ const monacoEl = ref()
 let editor: monaco.editor.IStandaloneCodeEditor
 
 watch(() => modelValue.value, () => {
-  if (editor && props.control) {
+  if (editor && modelValue.value !== editor.getValue()) {
     editor.setValue(modelValue.value || '')
   }
 })
@@ -39,6 +39,7 @@ onMounted(() => {
     minimap: {
       enabled: false,
     },
+    tabSize: 2,
   })
 
   const cancel = editor.onDidChangeModelContent(() => {
@@ -72,8 +73,8 @@ function clear() {
       </h2>
       <slot />
       <div class="ml-auto flex items-center gap-2">
-        <div v-if="!readonly" class="i-carbon-trash-can cursor-pointer opacity-75 hover:opacity-100" title="删除" @click="clear" />
-        <div class="i-carbon-copy cursor-pointer opacity-75 hover:opacity-100" title="复制代码" @click="copy()" />
+        <div v-if="!readonly" class="i-carbon-trash-can icon-btn" title="删除" @click="clear" />
+        <div class="i-carbon-copy icon-btn" title="复制代码" @click="copy()" />
       </div>
     </div>
     <div ref="monacoEl" class="kk-editor" />

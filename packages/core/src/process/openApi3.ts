@@ -48,12 +48,11 @@ export const ${getAPIName(path)} = (${data}, config = {}) => {
     ${data},
     ...config
   })
-}       
-          
+}
 `
           })
       })
-  return result.join('')
+  return result.join('\n')
 }
 
 function getAPIName(path: string) {
