@@ -10,13 +10,16 @@ import { allTemlates } from '~/data'
 
 const code = ref(raw)
 
-const templateKey = ref(0)
+const formData = useLocalStorage('__swagger_codegen_config', {
+  templateKey: 0,
+  jsdoc: false,
+})
 
 const result = computed(() => {
   try {
     return processOpenAPI(JSON.parse(code.value), {
       renderCode: (info) => {
-        return Mustache.render(allTemlates.value[templateKey.value].template, {
+        return Mustache.render(allTemlates.value[formData.value.templateKey].template, {
           ...info,
           isPost: info.method.toLowerCase() === 'post',
           isGet: info.method.toLowerCase() === 'get',
@@ -28,8 +31,16 @@ const result = computed(() => {
     return {
       code: '',
       dts: '',
+      jsdoc: '',
     }
   }
+})
+
+const showCode = computed(() => {
+  if (formData.value.jsdoc) {
+    return result.value.jsdoc + result.value.code
+  }
+  return result.value.code
 })
 </script>
 
@@ -56,23 +67,28 @@ const result = computed(() => {
       </Pane>
       <Pane>
         <Editor
-          :model-value="result.code"
+          :model-value="showCode"
           language="javascript"
           title="api代码"
           readonly
         >
           <select
-            v-model="templateKey"
+            v-model="formData.templateKey"
             class="mx-2"
           >
             <option
               v-for="(template, index) in allTemlates"
               :key="index"
+              :class="{
+                'color-teal-500': template.internal,
+              }"
               :value="index"
             >
               {{ template.name }}
             </option>
           </select>
+          <input v-model="formData.jsdoc" type="checkbox" name="jsdoc">
+          <label for="jsdoc">jsdoc</label>
         </Editor>
       </Pane>
       <Pane>

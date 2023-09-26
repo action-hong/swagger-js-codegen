@@ -4,7 +4,7 @@
  * @param {import('axios').AxiosRequestConfig} config
  * @returns {Promise<{{ returnType }}>}
  */
-export const {{ functionName }} = (data, config = {}) => {
+export function {{ functionName }}(data, config = {}) {
   return request.request({
     method: '{{ method }}',
     url: '{{{ url }}}',

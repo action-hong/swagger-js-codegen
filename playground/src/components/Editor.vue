@@ -73,7 +73,7 @@ function clear() {
       </h2>
       <slot />
       <div class="ml-auto flex items-center gap-2">
-        <div v-if="!readonly" class="i-carbon-trash-can icon-btn" title="删除" @click="clear" />
+        <div v-if="!readonly" class="i-carbon-trash-can icon-btn" title="删除代码" @click="clear" />
         <div class="i-carbon-copy icon-btn" title="复制代码" @click="copy()" />
       </div>
     </div>
