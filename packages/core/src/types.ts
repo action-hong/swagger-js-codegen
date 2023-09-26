@@ -8,6 +8,10 @@ export interface ProcessOpenAPIResult {
    */
   dts: string
 
+  /**
+   * jsdoc 类型标注
+   */
+  jsdoc: string
 }
 
 export interface ProcessApiInfo {

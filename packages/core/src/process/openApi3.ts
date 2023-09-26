@@ -5,6 +5,7 @@ export function processOpenAPI3(doc: OpenAPIV3.Document, _options: ProcessOpenAP
   return {
     code: generateApiCode(doc, _options),
     dts: generateTSTypeCode(doc),
+    jsdoc: generateJsdocCode(doc),
   }
 }
 
@@ -136,4 +137,32 @@ ${
 }      
 `
     }).join('')
+}
+
+function generateJsdocCode(swagger: any) {
+  const schemas = swagger.components.schemas
+  const comments = Object.entries(schemas)
+    .map(([name, schema]) => {
+      const s = schema as any
+      const required = s.required || []
+      return `
+ * @typedef {object} ${name}
+${
+  Object.entries(s.properties)
+    .map(([key, value]) => {
+      const v = value as any
+      const isRequired = required.includes(key)
+      const type = getSchemaType(v)
+      if (isRequired) {
+        key = `[${key}]`
+      }
+      return ` * @property {${type}} ${key}`
+    }).join('\n')
+}`
+    }).join('\n')
+  return `
+/**${comments}}
+ */
+
+`
 }
