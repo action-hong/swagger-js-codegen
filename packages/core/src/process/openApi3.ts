@@ -159,9 +159,8 @@ ${
       return ` * @property {${type}} ${key}`
     }).join('\n')
 }`
-    }).join('\n')
-  return `
-/**${comments}}
+    }).join('\n *')
+  return `/**${comments}}
  */
 
 `
